@@ -1,0 +1,79 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+color: white;
+text-align: center;
+
+/* BACKGROUND */
+background: url('images/bg.jpg') no-repeat center center fixed;
+background-size: cover;
+}
+
+/* OVERLAY OSCURO */
+.overlay {
+background: rgba(0, 0, 0, 0.65);
+min-height: 100vh;
+padding: 60px 20px;
+}
+
+/* LOGO */
+.logo {
+width: 280px;
+margin-bottom: 20px;
+}
+
+/* TITULO */
+h1 {
+font-size: 50px;
+margin: 10px 0;
+}
+
+/* TEXTO */
+p {
+font-size: 18px;
+color: #ccc;
+max-width: 600px;
+margin: 20px auto;
+}
+
+/* BOTONES */
+.buttons {
+margin-top: 20px;
+}
+
+.btn {
+display: inline-block;
+margin: 10px;
+padding: 15px 30px;
+font-size: 18px;
+border-radius: 8px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.primary {
+background: #f5c542;
+color: black;
+}
+
+.secondary {
+border: 2px solid #f5c542;
+color: #f5c542;
+}
+
+/* FEATURES */
+.features {
+margin-top: 50px;
+font-size: 18px;
+}
+
+.features div {
+margin: 8px 0;
+}
+
+/* FOOTER */
+footer {
+margin-top: 60px;
+font-size: 14px;
+color: #888;
+}
