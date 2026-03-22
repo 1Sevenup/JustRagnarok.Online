@@ -4,25 +4,27 @@ body {
   color: #fff;
   text-align: center;
 
-  /* BACKGROUND */
-  background: url('images/bg.jpg') no-repeat center center fixed;
+  background-color: #0f0f12; /* fallback */
+  background-image: url('./images/bg.jpg');
   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* CONTENEDOR CON OVERLAY */
+/* overlay */
 .container {
   padding: 60px 20px;
   background: rgba(0, 0, 0, 0.65);
   min-height: 100vh;
 }
 
-/* LOGO */
+/* logo */
 .logo {
   width: 260px;
   margin-bottom: 20px;
 }
 
-/* TITULO */
+/* title */
 h1 {
   font-size: 64px;
   margin: 0;
@@ -32,7 +34,7 @@ h1 span {
   color: #f5c542;
 }
 
-/* TEXTO */
+/* text */
 p {
   font-size: 18px;
   color: #ccc;
@@ -40,7 +42,7 @@ p {
   margin: 20px auto;
 }
 
-/* BOTONES */
+/* buttons */
 .btn {
   display: inline-block;
   margin: 15px;
@@ -61,7 +63,7 @@ p {
   color: #f5c542;
 }
 
-/* FEATURES */
+/* features */
 .features {
   margin-top: 60px;
 }
@@ -71,7 +73,7 @@ p {
   font-size: 18px;
 }
 
-/* FOOTER */
+/* footer */
 footer {
   margin-top: 80px;
   font-size: 14px;
