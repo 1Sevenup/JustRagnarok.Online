@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JustRO - Pure Ragnarok Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f0f12;
+      color: #fff;
+      text-align: center;
+    }
+
+```
+.container {
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+h1 span {
+  color: #f5c542;
+}
+
+p {
+  font-size: 18px;
+  color: #ccc;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.btn {
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background: #f5c542;
+  color: #000;
+}
+
+.btn-secondary {
+  border: 2px solid #f5c542;
+  color: #f5c542;
+}
+
+.features {
+  margin-top: 60px;
+}
+
+.feature {
+  margin: 20px;
+  font-size: 18px;
+}
+
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  color: #666;
+}
+```
+
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+  <h1>Just<span>RO</span></h1>
+
+  <p>
+    A pure, low-rate Ragnarok experience.  
+    No pay-to-win. No custom systems. Just Ragnarok.
+  </p>
+
+<a href="#" class="btn btn-primary">Download</a> <a href="#" class="btn btn-secondary">Join Discord</a>
+
+  <div class="features">
+    <div class="feature">⚔️ Classic Low Rates</div>
+    <div class="feature">🛡️ No Pay-to-Win</div>
+    <div class="feature">🌍 International Server</div>
+    <div class="feature">👥 Active Community</div>
+  </div>
+
+  <footer>
+    © 2026 JustRO - Fan Project
+  </footer>
+</div>
+
+</body>
+</html>
