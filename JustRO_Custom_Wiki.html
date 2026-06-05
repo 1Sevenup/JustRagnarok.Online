@@ -1053,7 +1053,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <span data-i18n="nav.qol">Quality of Life</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#qol-dialog" class="nav-item"><span class="ni-icon">💬</span> <span data-i18n="nav.qol.dialog">NPC Dialog Timeout</span></a>
+      <a href="#qol-dialog"      class="nav-item"><span class="ni-icon">💬</span> <span data-i18n="nav.qol.dialog">NPC Dialog Timeout</span></a>
+      <a href="#qol-tooldealer" class="nav-item"><span class="ni-icon">🛒</span> <span data-i18n="nav.qol.tooldealer">Tool Dealer</span></a>
     </div>
   </div>
 
@@ -1073,7 +1074,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <div class="hero-stat"><div class="hs-num">5</div><div class="hs-label" data-i18n="hero.stat.commands">New Commands</div></div>
       <div class="hero-stat"><div class="hs-num">421</div><div class="hs-label" data-i18n="hero.stat.bestiary">Bestiary Monsters</div></div>
       <div class="hero-stat"><div class="hs-num">9</div><div class="hs-label" data-i18n="hero.stat.dishes">Chef Cat Dishes</div></div>
-      <div class="hero-stat"><div class="hs-num">36</div><div class="hs-label" data-i18n="hero.stat.total">Total Features</div></div>
+      <div class="hero-stat"><div class="hs-num">37</div><div class="hs-label" data-i18n="hero.stat.total">Total Features</div></div>
     </div>
   </div>
 
@@ -2629,7 +2630,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <div class="wiki-section-header">
         <div class="wiki-section-icon">✨</div>
         <h2 data-i18n="sec.qol.title">Quality of Life</h2>
-        <span class="section-count" data-i18n="sec.qol.count">1 feature</span>
+        <span class="section-count" data-i18n="sec.qol.count">2 features</span>
       </div>
 
       <div class="article-grid">
@@ -2656,6 +2657,33 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               </table>
             </div>
             <p style="font-size:0.88rem;color:var(--text);margin-top:10px">The previous timeouts were too short for players reading quest text, thinking through menu choices, or stepping away briefly during an NPC interaction.</p>
+          </div>
+        </div>
+
+        <!-- Tool Dealer -->
+        <div class="article-card" id="qol-tooldealer" data-search-tags="tool dealer prontera shop fly wing butterfly wing potions yggdrasil trap arrows silver fire iron venom knife blue gemstone magnifier concentration awakening berserk">
+          <div class="article-card-head">
+            <div class="article-card-icon">🛒</div>
+            <div>
+              <h3 data-i18n="card.tooldealer.title">Tool Dealer — Prontera Supply Shop</h3>
+              <div class="subtitle"><span data-i18n="card.tooldealer.sub">Prontera (123, 96)</span> &nbsp;<span class="badge badge-gold">Standard NPC Prices</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.tooldealer.p1">A custom Tool Dealer in Prontera stocks a wide selection of consumables, ammo, and utility items at standard NPC prices. It consolidates supplies that would otherwise require visiting multiple shops across different cities.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.category">Category</th><th data-i18n="th.item">Items</th></tr></thead>
+                <tbody>
+                  <tr><td>Healing Potions</td><td>Red Potion · Orange Potion · Yellow Potion · White Potion · Blue Potion · Green Potion</td></tr>
+                  <tr><td>ASPD Potions</td><td>Concentration Potion · Awakening Potion · Berserk Potion</td></tr>
+                  <tr><td>Wings</td><td>Fly Wing · Light Fly Wing · Butterfly Wing</td></tr>
+                  <tr><td>Support</td><td>Yggdrasil Leaf · Magnifier</td></tr>
+                  <tr><td>Crafting &amp; Skills</td><td>Blue Gemstone · Trap</td></tr>
+                  <tr><td>Ammo &amp; Throwing</td><td>Silver Arrow · Fire Arrow · Iron Arrow · Venom Knife</td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
 
@@ -2797,7 +2825,8 @@ const searchIndex = [
   { id: 'inv-overweight',  cat: 'Inventory & Items',  title: 'Overweight Regen Threshold — 70%',     tags: 'overweight regen threshold 70 percent weight hp sp natural recovery' },
   { id: 'drops-announcer', cat: 'Drops & Broadcasts', title: 'Rare Drop Announcer — Clickable Links','tags': 'rare drop announcer clickable item link broadcast color yellow format message obtained stole' },
   { id: 'pet-autofeed',    cat: 'Pets',               title: 'Pet Auto-Feed — All Pets',             tags: 'pet auto feed autofeed toggle intimacy hunger button all pets' },
-  { id: 'qol-dialog',      cat: 'Quality of Life',    title: 'NPC Dialog Timeout Extended',          tags: 'npc dialog timeout extended minutes menu input next button idle close' },
+  { id: 'qol-dialog',      cat: 'Quality of Life',    title: 'NPC Dialog Timeout Extended',            tags: 'npc dialog timeout extended minutes menu input next button idle close' },
+  { id: 'qol-tooldealer', cat: 'Quality of Life',    title: 'Tool Dealer — Prontera Supply Shop',     tags: 'tool dealer prontera shop fly wing butterfly wing potions yggdrasil trap arrows silver fire iron venom knife blue gemstone magnifier concentration awakening berserk' },
   { id: 'infopanel-main',    cat: 'Info Panel',       title: 'Info Panel — In-Game Control Center',  tags: 'info panel control center button interface vending storage attacking guard safety' },
   { id: 'infopanel-account', cat: 'Info Panel',       title: 'Account Information',                  tags: 'account information playtime character base level job level zeny hours minutes' },
   { id: 'infopanel-cmds',    cat: 'Info Panel',       title: 'Command Settings — Persistent Toggles',tags: 'command settings autoloot show exp no ks hide drop name persistent saved login toggle' },
