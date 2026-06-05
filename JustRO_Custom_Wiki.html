@@ -1042,8 +1042,9 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <span data-i18n="nav.dailyquests">Daily Quests</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#daily-adventure" class="nav-item"><span class="ni-icon">⚔️</span> <span data-i18n="nav.dq.adventure">Adventure Board</span></a>
-      <a href="#daily-scrap"     class="nav-item"><span class="ni-icon">🧺</span> <span data-i18n="nav.dq.scrap">Scrap Collector</span></a>
+      <a href="#daily-adventure"  class="nav-item"><span class="ni-icon">⚔️</span> <span data-i18n="nav.dq.adventure">Adventure Board</span></a>
+      <a href="#daily-scrap"      class="nav-item"><span class="ni-icon">🧺</span> <span data-i18n="nav.dq.scrap">Scrap Collector</span></a>
+      <a href="#daily-petquest"   class="nav-item"><span class="ni-icon">🐾</span> <span data-i18n="nav.dq.petquest">Lost Pet Quest</span></a>
     </div>
   </div>
 
@@ -1072,7 +1073,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <div class="hero-stat"><div class="hs-num">5</div><div class="hs-label" data-i18n="hero.stat.commands">New Commands</div></div>
       <div class="hero-stat"><div class="hs-num">421</div><div class="hs-label" data-i18n="hero.stat.bestiary">Bestiary Monsters</div></div>
       <div class="hero-stat"><div class="hs-num">9</div><div class="hs-label" data-i18n="hero.stat.dishes">Chef Cat Dishes</div></div>
-      <div class="hero-stat"><div class="hs-num">35</div><div class="hs-label" data-i18n="hero.stat.total">Total Features</div></div>
+      <div class="hero-stat"><div class="hs-num">36</div><div class="hs-label" data-i18n="hero.stat.total">Total Features</div></div>
     </div>
   </div>
 
@@ -2444,7 +2445,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <div class="wiki-section-header">
         <div class="wiki-section-icon">📅</div>
         <h2 data-i18n="sec.dq.title">Daily Quests</h2>
-        <span class="section-count" data-i18n="sec.dq.count">2 NPCs · Angeling Coins</span>
+        <span class="section-count" data-i18n="sec.dq.count">3 NPCs · Angeling Coins</span>
       </div>
 
       <!-- Angeling Coin intro banner -->
@@ -2452,7 +2453,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
         <div style="font-size:2.2rem;flex-shrink:0">🪙</div>
         <div>
           <div style="font-weight:700;color:var(--gold-light);margin-bottom:4px">Angeling Coin (ID #8975)</div>
-          <div style="font-size:0.88rem;color:var(--text);line-height:1.5">The currency for the Chef Cat daily buff system. Earned exclusively through daily quests — <strong style="color:var(--gold)">Adventure Board</strong> gives 1 coin per completion, <strong style="color:var(--gold)">Scrap Collector</strong> gives 3 coins per completion. Both have an 8-hour cooldown, so a player who completes both daily quests every day earns up to <strong style="color:var(--gold)">4 coins / 8 hours</strong>.</div>
+          <div style="font-size:0.88rem;color:var(--text);line-height:1.5">The currency for the Chef Cat daily buff system. Earned exclusively through daily quests — <strong style="color:var(--gold)">Adventure Board</strong>, <strong style="color:var(--gold)">Scrap Collector</strong>, and <strong style="color:var(--gold)">Lost Pet Quest</strong> each give 1 coin per completion. All three have an 8-hour cooldown, so a player who completes all three earns up to <strong style="color:var(--gold)">3 coins / 8 hours</strong>.</div>
         </div>
       </div>
 
@@ -2468,27 +2469,30 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
             </div>
           </div>
           <div class="article-card-body">
-            <p data-i18n="card.adventure.p1">The <strong>Adventure Recruiter</strong> NPC in Prontera assigns one mission per cycle from a rotating pool. Each completion rewards your choice of an Angeling Coin, a drop rate boost, or an EXP boost.</p>
+            <p data-i18n="card.adventure.p1">The <strong>Adventure Recruiter</strong> NPC in Prontera assigns one mission per cycle from a rotating pool. Harder missions pay a difficulty bonus in Angeling Coins on top of your chosen reward — up to <strong>+2 coins</strong> for the toughest assignment.</p>
 
             <h4 style="margin:14px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.missionTypes">Mission Types</h4>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th data-i18n="th.type">Type</th><th data-i18n="th.objective">Objective</th><th data-i18n="th.example">Example</th></tr></thead>
+                <thead><tr><th data-i18n="th.type">Type</th><th data-i18n="th.objective">Objective</th><th data-i18n="th.example">Example</th><th data-i18n="th.bonus">Bonus</th></tr></thead>
                 <tbody>
-                  <tr>
-                    <td>🗡️ Hunt</td>
-                    <td>Kill 30 of a specific field monster</td>
-                    <td>Kill 30 Orcs, Kill 30 Zombies, Kill 30 Hydras</td>
-                  </tr>
                   <tr>
                     <td>🧭 Explore</td>
                     <td>Travel to a dungeon and speak with the Explorer NPC located there</td>
                     <td>Speak with the Explorer in Payon Dungeon, Orc Dungeon, Glast Heim, etc.</td>
+                    <td style="color:var(--text-dim)">—</td>
+                  </tr>
+                  <tr>
+                    <td>🗡️ Hunt</td>
+                    <td>Kill 30 of a specific field monster</td>
+                    <td>Kill 30 Orcs, Kill 30 Zombies, Kill 30 Hydras</td>
+                    <td style="color:var(--green);font-weight:700">+1 coin</td>
                   </tr>
                   <tr>
                     <td>💀 Challenge</td>
                     <td>Kill 1 tough field monster</td>
                     <td>Kill 1 Sohee, Kill 1 Orc Lady, Kill 1 Bathory</td>
+                    <td style="color:var(--gold);font-weight:700">+2 coins</td>
                   </tr>
                 </tbody>
               </table>
@@ -2544,22 +2548,22 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
       <div class="article-grid" style="margin-top:20px">
 
         <!-- Scrap Collector -->
-        <div class="article-card" id="daily-scrap" data-search-tags="scrap collector daily item quest prontera potions herbs angeling coin 3 coins delivery 8 hour cooldown 30 50 random">
+        <div class="article-card" id="daily-scrap" data-search-tags="scrap collector daily item quest prontera potions herbs angeling coin 1 coin delivery 8 hour cooldown 30 50 random">
           <div class="article-card-head">
             <div class="article-card-icon">🧺</div>
             <div>
               <h3 data-i18n="card.scrap.title">Scrap Collector — Daily Item Delivery</h3>
-              <div class="subtitle">Scrap Collector · Prontera &nbsp;<span class="badge badge-gold">8-hour cooldown</span> &nbsp;<span class="badge badge-green">3 Angeling Coins</span></div>
+              <div class="subtitle">Scrap Collector · Prontera &nbsp;<span class="badge badge-gold">8-hour cooldown</span> &nbsp;<span class="badge badge-teal">1 Angeling Coin</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p data-i18n="card.scrap.p1">The <strong>Scrap Collector</strong> NPC in Prontera requests a delivery of two random items. Completing the delivery earns <strong>3 Angeling Coins</strong> — the most efficient daily source of coins for Chef Cat.</p>
+            <p data-i18n="card.scrap.p1">The <strong>Scrap Collector</strong> NPC in Prontera requests a delivery of two random items. Completing the delivery earns <strong>1 Angeling Coin</strong>.</p>
 
             <ol class="step-list">
               <li><span class="step-num">1</span>Talk to the Scrap Collector. He shows you two items he needs, each as a clickable link, with a quantity between 30 and 50.</li>
               <li><span class="step-num">2</span>Gather both items in the required amounts.</li>
               <li><span class="step-num">3</span>Return with both items in your inventory. He checks automatically and takes them.</li>
-              <li><span class="step-num">4</span>Receive <strong style="color:var(--gold-light)">3 Angeling Coins</strong>. An 8-hour cooldown begins.</li>
+              <li><span class="step-num">4</span>Receive <strong style="color:var(--gold-light)">1 Angeling Coin</strong>. An 8-hour cooldown begins.</li>
             </ol>
 
             <div class="wiki-table-wrap" style="margin-top:12px">
@@ -2573,7 +2577,43 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
             </div>
 
             <div class="callout green" data-i18n="callout.scrap" style="margin-top:12px">
-              <strong>Tip — maximize coins per day:</strong> Complete both the Adventure Board and the Scrap Collector every 8 hours to earn up to 4 Angeling Coins per cycle (1 from Adventure + 3 from Scrap), which translates to <strong>4 Chef Cat dishes every 8 hours</strong>.
+              <strong>Tip — maximize coins per day:</strong> Complete all three daily quests (Adventure Board, Scrap Collector, and Lost Pet Quest) every 8 hours to earn up to 3 Angeling Coins per cycle, which translates to <strong>3 Chef Cat dishes every 8 hours</strong>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="article-grid" style="margin-top:20px">
+
+        <!-- Lost Pet Quest -->
+        <div class="article-card" id="daily-petquest" data-search-tags="lost pet quest prontera dog cat girl child angeling coin 8 hour cooldown find search 10 pets stray lost child">
+          <div class="article-card-head">
+            <div class="article-card-icon">🐾</div>
+            <div>
+              <h3 data-i18n="card.petquest.title">Lost Pet Quest — Daily Search</h3>
+              <div class="subtitle"><span data-i18n="card.petquest.sub">Lost Child · Prontera</span> &nbsp;<span class="badge badge-gold">8-hour cooldown</span> &nbsp;<span class="badge badge-teal">1 Angeling Coin</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.petquest.p1">A little girl near the Prontera fountain has lost her pets. Talk to her to accept the quest, then find the 5 dogs and 5 cats scattered across the city.</p>
+
+            <ol class="step-list">
+              <li><span class="step-num">1</span>Talk to the <strong>Lost Child</strong> near the Prontera fountain to accept the quest.</li>
+              <li><span class="step-num">2</span>Walk around Prontera and talk to any stray dog or cat you spot.</li>
+              <li><span class="step-num">3</span>Each pet reacts when found — your progress shows in the dialog.</li>
+              <li><span class="step-num">4</span>Return to the Lost Child once all <strong style="color:var(--gold-light)">10/10 pets</strong> are found to receive your reward.</li>
+              <li><span class="step-num">5</span>An 8-hour cooldown begins after claiming the reward.</li>
+            </ol>
+
+            <div class="stat-row" style="margin-top:12px">
+              <div class="stat-chip"><span class="sc-label">Total</span><span class="sc-val">10 pets</span></div>
+              <div class="stat-chip"><span class="sc-label">Dogs</span><span class="sc-val">5</span></div>
+              <div class="stat-chip"><span class="sc-label">Cats</span><span class="sc-val">5</span></div>
+            </div>
+
+            <div class="callout" data-i18n="callout.petquest" style="margin-top:12px">
+              <strong>How pets react:</strong> Pets ignore all players who do not have the quest active — talking to them does nothing. Once you have the quest, each pet plays a sound effect and shows your current count. Already-found pets display your total but give no extra reward.
             </div>
           </div>
         </div>
@@ -2762,8 +2802,9 @@ const searchIndex = [
   { id: 'infopanel-account', cat: 'Info Panel',       title: 'Account Information',                  tags: 'account information playtime character base level job level zeny hours minutes' },
   { id: 'infopanel-cmds',    cat: 'Info Panel',       title: 'Command Settings — Persistent Toggles',tags: 'command settings autoloot show exp no ks hide drop name persistent saved login toggle' },
   { id: 'infopanel-guide',   cat: 'Info Panel',       title: 'Where to Level Guide',                 tags: 'where to level guide recommendations base level areas dungeon poring island orc dungeon payon thor abyss nameless' },
-  { id: 'daily-adventure',   cat: 'Daily Quests',     title: 'Adventure Board — Daily Mission',      tags: 'adventure recruiter board daily quest hunt kill explore speak npc challenge reroll 10000 zeny 8 hour cooldown angeling coin drop boost exp boost prontera' },
-  { id: 'daily-scrap',       cat: 'Daily Quests',     title: 'Scrap Collector — Daily Item Delivery','tags': 'scrap collector daily item quest prontera potions herbs angeling coin 3 coins delivery 8 hour cooldown 30 50 random' },
+  { id: 'daily-adventure',   cat: 'Daily Quests',     title: 'Adventure Board — Daily Mission',       tags: 'adventure recruiter board daily quest hunt kill explore speak npc challenge reroll 10000 zeny 8 hour cooldown angeling coin drop boost exp boost prontera' },
+  { id: 'daily-scrap',       cat: 'Daily Quests',     title: 'Scrap Collector — Daily Item Delivery', tags: 'scrap collector daily item quest prontera potions herbs angeling coin 1 coin delivery 8 hour cooldown 30 50 random' },
+  { id: 'daily-petquest',    cat: 'Daily Quests',     title: 'Lost Pet Quest — Daily Search',         tags: 'lost pet quest prontera dog cat girl child angeling coin find search 10 pets stray 8 hour cooldown lost child' },
 ];
 
 const searchInput   = document.getElementById('searchInput');
