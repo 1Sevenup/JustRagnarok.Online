@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Just RO — Custom Features Wiki</title>
+<script src="wiki_i18n.js"></script>
 <style>
 /* ============================================================
    ROOT & RESET
@@ -744,6 +745,112 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 }
 
 /* ============================================================
+   LIGHT THEME
+============================================================ */
+[data-theme="light"] {
+  --bg:         #f0f4f8;
+  --bg2:        #ffffff;
+  --bg3:        #e8edf4;
+  --border:     #c8d4e0;
+  --gold:       #8a6410;
+  --gold-light: #6e4f0a;
+  --gold-dim:   #b08820;
+  --blue:       #1e5fa8;
+  --blue-dim:   #1a4a88;
+  --green:      #166534;
+  --red:        #9b1c1c;
+  --purple:     #5521b5;
+  --teal:       #0d6e6e;
+  --orange:     #9a3412;
+  --text:       #1e293b;
+  --text-dim:   #5a7090;
+  --text-bright:#0f172a;
+}
+
+[data-theme="light"] .topbar          { background:#1e293b; border-bottom-color:#334155; }
+[data-theme="light"] .topbar-subtitle { color:rgba(255,255,255,0.55); }
+[data-theme="light"] .search-wrap input { background:#2d3f55; border-color:#3d5470; color:#e2e8f0; }
+[data-theme="light"] .search-wrap input::placeholder { color:rgba(255,255,255,0.35); }
+[data-theme="light"] .lang-btn        { color:rgba(255,255,255,0.65); border-color:rgba(255,255,255,0.15); }
+[data-theme="light"] .lang-btn:hover,
+[data-theme="light"] .lang-btn.active { color:#ffffff; border-color:var(--gold-light); background:rgba(255,255,255,0.1); }
+[data-theme="light"] .theme-btn       { color:rgba(255,255,255,0.65); border-color:rgba(255,255,255,0.15); }
+[data-theme="light"] .theme-btn:hover { color:#ffffff; border-color:rgba(255,255,255,0.4); }
+[data-theme="light"] .search-results  { background:#ffffff; border-color:#c8d4e0; }
+[data-theme="light"] .search-result-item { color:#1e293b; }
+[data-theme="light"] .search-result-item:hover { background:#f0f4f8; color:var(--gold); }
+[data-theme="light"] .sidebar         { background:#ffffff; border-right-color:#c8d4e0; }
+[data-theme="light"] .nav-item        { color:#5a7090; }
+[data-theme="light"] .nav-item:hover  { background:#f0f4f8; color:#1e293b; }
+[data-theme="light"] .nav-item.active { background:rgba(176,136,32,0.1); color:var(--gold); }
+[data-theme="light"] .wiki-hero       { background:linear-gradient(135deg,#1e293b 0%,#1e4577 60%,#1e62a8 100%); }
+[data-theme="light"] .wiki-hero h1,
+[data-theme="light"] .wiki-hero-eyebrow,
+[data-theme="light"] .wiki-hero-desc,
+[data-theme="light"] .hero-stat .hs-label { color:rgba(255,255,255,0.85) !important; }
+[data-theme="light"] .article-card    { background:#ffffff; border-color:#c8d4e0; }
+[data-theme="light"] .article-card:hover { border-color:var(--gold-dim); }
+[data-theme="light"] .article-card-head { border-bottom-color:#e2e8f0; }
+[data-theme="light"] .article-card-head h3 { color:#0f172a; }
+[data-theme="light"] .cmd-block       { background:#f8fafc; border-color:#c8d4e0; }
+[data-theme="light"] .callout         { background:#eff6ff; border-left-color:#1e5fa8; }
+[data-theme="light"] .callout.green   { background:#f0fdf4; }
+[data-theme="light"] .callout.red     { background:#fef2f2; }
+[data-theme="light"] .callout strong  { color:#0f172a; }
+[data-theme="light"] .wiki-table-wrap { border-color:#c8d4e0; }
+[data-theme="light"] .wiki-table      { background:#ffffff; }
+[data-theme="light"] .wiki-table tbody tr:nth-child(even) { background:#f8fafc; }
+[data-theme="light"] .wiki-table tbody tr:hover { background:#eff6ff; }
+[data-theme="light"] .wiki-table td   { border-bottom-color:#e2e8f0; }
+[data-theme="light"] .swot-box,
+[data-theme="light"] .thesis-point,
+[data-theme="light"] .projection-card,
+[data-theme="light"] .revenue-card,
+[data-theme="light"] .summary-card    { background:#ffffff; }
+[data-theme="light"] .stat-chip       { background:#f0f4f8; border-color:#c8d4e0; }
+[data-theme="light"] .dish-card       { background:#f8fafc; border-color:#c8d4e0; }
+[data-theme="light"] .ba-box.before   { background:#fef2f2; }
+[data-theme="light"] .ba-box.after    { background:#f0fdf4; }
+[data-theme="light"] .flow-step       { background:#f8fafc; border-color:#c8d4e0; }
+[data-theme="light"] .block-item      { background:rgba(239,68,68,0.05); }
+[data-theme="light"] .search-active-banner { background:rgba(176,136,32,0.1); border-bottom-color:rgba(176,136,32,0.2); }
+[data-theme="light"] .toc-item        { background:#f8fafc; color:#1e293b; }
+[data-theme="light"] .toc-item:hover  { background:#e8edf4; }
+[data-theme="light"] .back-to-top     { background:#f8fafc; border-color:#c8d4e0; color:#5a7090; }
+[data-theme="light"] .back-to-top:hover { color:var(--gold); border-color:var(--gold-dim); }
+[data-theme="light"] .doc-footer      { background:#1e293b; }
+[data-theme="light"] .wiki-footer     { border-top-color:#c8d4e0; }
+[data-theme="light"] .section-divider { background:linear-gradient(to right,#c8d4e0,transparent); }
+[data-theme="light"] h2               { color:#0f172a; }
+[data-theme="light"] .section-label   { color:#1e5fa8; }
+[data-theme="light"] h3               { color:#0f172a; border-bottom-color:#1e5fa8; }
+[data-theme="light"] code             { background:#f0f4f8; border-color:#c8d4e0; color:#8a6410; }
+
+/* ============================================================
+   LANG / THEME CONTROLS
+============================================================ */
+.topbar-controls { display:flex; align-items:center; gap:6px; margin-left:12px; }
+
+.lang-btn, .theme-btn {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.55);
+  padding: 4px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+
+.lang-btn:hover, .theme-btn:hover  { color:#fff; border-color:rgba(255,255,255,0.5); }
+.lang-btn.active { color:var(--gold-light); border-color:var(--gold-dim); background:rgba(212,168,67,0.15); }
+
+.controls-sep { width:1px; height:20px; background:rgba(255,255,255,0.15); margin:0 4px; }
+
+/* ============================================================
    RESPONSIVE
 ============================================================ */
 @media (max-width: 900px) {
@@ -781,6 +888,16 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <input type="text" id="searchInput" placeholder="Search features, commands..." autocomplete="off">
     <div class="search-results" id="searchResults"></div>
   </div>
+
+  <div class="topbar-controls">
+    <div class="controls-sep"></div>
+    <button class="lang-btn active" onclick="setLang('en')" id="lb-en">EN</button>
+    <button class="lang-btn" onclick="setLang('es')" id="lb-es">ES</button>
+    <button class="lang-btn" onclick="setLang('pt')" id="lb-pt">PT</button>
+    <button class="lang-btn" onclick="setLang('tl')" id="lb-tl">TL</button>
+    <div class="controls-sep"></div>
+    <button class="theme-btn" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
+  </div>
 </header>
 
 <!-- ============================================================
@@ -790,7 +907,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Commands <span class="caret">▼</span>
+      <span data-i18n="nav.commands">Commands</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
       <a href="#cmd-nolootid"    class="nav-item"><span class="ni-icon">🚫</span> @nolootid</a>
@@ -803,102 +920,139 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Streamers <span class="caret">▼</span>
+      <span data-i18n="nav.bg">Battleground</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#stream-programme" class="nav-item"><span class="ni-icon">🎥</span> Reward Programme</a>
-      <a href="#stream-website"   class="nav-item"><span class="ni-icon">🌐</span> Live on Website</a>
+      <a href="#bg-overview"   class="nav-item"><span class="ni-icon">🏟️</span> <span data-i18n="nav.bg.overview">Overview &amp; Modes</span></a>
+      <a href="#bg-badges"     class="nav-item"><span class="ni-icon">🎖️</span> <span data-i18n="nav.bg.badges">Badge System</span></a>
+      <a href="#bg-erundek"    class="nav-item"><span class="ni-icon">⚔️</span> <span data-i18n="nav.bg.erundek">Erundek — Equipment</span></a>
+      <a href="#bg-consumables"class="nav-item"><span class="ni-icon">🧪</span> <span data-i18n="nav.bg.consumables">Consumables Machine</span></a>
+      <a href="#bg-lp"         class="nav-item"><span class="ni-icon">🏆</span> <span data-i18n="nav.bg.lp">LP Ranking System</span></a>
+      <a href="#bg-emblems"    class="nav-item"><span class="ni-icon">🎨</span> <span data-i18n="nav.bg.emblems">Team Emblems</span></a>
+      <a href="#bg-balancer"   class="nav-item"><span class="ni-icon">⚖️</span> <span data-i18n="nav.bg.balancer">Mid-Game Balancer</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Social & Party <span class="caret">▼</span>
+      <span data-i18n="nav.streamers">Streamers</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#social-agency"    class="nav-item"><span class="ni-icon">📋</span> Adventurer's Agency</a>
-      <a href="#social-rodex"     class="nav-item"><span class="ni-icon">✉️</span> Rodex Restrictions</a>
-      <a href="#social-oauth"     class="nav-item"><span class="ni-icon">🔑</span> Google / Discord Login</a>
+      <a href="#stream-programme" class="nav-item"><span class="ni-icon">🎥</span> <span data-i18n="nav.stream.prog">Reward Programme</span></a>
+      <a href="#stream-website"   class="nav-item"><span class="ni-icon">🌐</span> <span data-i18n="nav.stream.web">Live on Website</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Progression <span class="caret">▼</span>
+      <span data-i18n="nav.social">Social & Party</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#prog-bestiary"  class="nav-item"><span class="ni-icon">📚</span> Bestiary System</a>
-      <a href="#prog-killcount" class="nav-item"><span class="ni-icon">📊</span> Kill Counter</a>
+      <a href="#social-agency"    class="nav-item"><span class="ni-icon">📋</span> <span data-i18n="nav.social.agency">Adventurer's Agency</span></a>
+      <a href="#social-rodex"     class="nav-item"><span class="ni-icon">✉️</span> <span data-i18n="nav.social.rodex">Rodex Restrictions</span></a>
+      <a href="#social-oauth"     class="nav-item"><span class="ni-icon">🔑</span> <span data-i18n="nav.social.oauth">Google / Discord Login</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Daily Features <span class="caret">▼</span>
+      <span data-i18n="nav.progression">Progression</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#daily-chef"   class="nav-item"><span class="ni-icon">🍳</span> Chef Cat NPC</a>
+      <a href="#prog-bestiary"  class="nav-item"><span class="ni-icon">📚</span> <span data-i18n="nav.prog.bestiary">Bestiary System</span></a>
+      <a href="#prog-killcount" class="nav-item"><span class="ni-icon">📊</span> <span data-i18n="nav.prog.killcount">Kill Counter</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      MVP System <span class="caret">▼</span>
+      <span data-i18n="nav.daily">Daily Features</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#mvp-respawn"    class="nav-item"><span class="ni-icon">♻️</span> Persistent Respawn</a>
-      <a href="#mvp-tombstones" class="nav-item"><span class="ni-icon">🪦</span> Enhanced Tombstones</a>
+      <a href="#daily-chef"   class="nav-item"><span class="ni-icon">🍳</span> <span data-i18n="nav.daily.chef">Chef Cat NPC</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Combat & Gameplay <span class="caret">▼</span>
+      <span data-i18n="nav.mvp">MVP System</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#combat-traps"      class="nav-item"><span class="ni-icon">🪤</span> Traps vs Allies Fix</a>
-      <a href="#combat-traplimit"  class="nav-item"><span class="ni-icon">⚡</span> Trap Limit (12 per type)</a>
-      <a href="#combat-snap"       class="nav-item"><span class="ni-icon">🔒</span> Snap While Immobilized</a>
-      <a href="#combat-sonicblow"  class="nav-item"><span class="ni-icon">⚔️</span> Sonic Blow Auto-Cast</a>
-      <a href="#combat-mobchase"   class="nav-item"><span class="ni-icon">🏃</span> Monster Chase Fix</a>
+      <a href="#mvp-respawn"    class="nav-item"><span class="ni-icon">♻️</span> <span data-i18n="nav.mvp.respawn">Persistent Respawn</span></a>
+      <a href="#mvp-tombstones" class="nav-item"><span class="ni-icon">🪦</span> <span data-i18n="nav.mvp.tombstones">Enhanced Tombstones</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Inventory & Items <span class="caret">▼</span>
+      <span data-i18n="nav.combat">Combat & Gameplay</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#inv-favorite"      class="nav-item"><span class="ni-icon">⭐</span> Favorite Tab Protection</a>
-      <a href="#inv-descriptions"  class="nav-item"><span class="ni-icon">📝</span> Item Descriptions</a>
-      <a href="#inv-overweight"    class="nav-item"><span class="ni-icon">⚖️</span> Overweight Regen (70%)</a>
+      <a href="#combat-traps"      class="nav-item"><span class="ni-icon">🪤</span> <span data-i18n="nav.combat.traps">Traps vs Allies Fix</span></a>
+      <a href="#combat-traplimit"  class="nav-item"><span class="ni-icon">⚡</span> <span data-i18n="nav.combat.traplimit">Trap Limit (12 per type)</span></a>
+      <a href="#combat-snap"       class="nav-item"><span class="ni-icon">🔒</span> <span data-i18n="nav.combat.snap">Snap While Immobilized</span></a>
+      <a href="#combat-sonicblow"  class="nav-item"><span class="ni-icon">⚔️</span> <span data-i18n="nav.combat.sonicblow">Sonic Blow Auto-Cast</span></a>
+      <a href="#combat-mobchase"   class="nav-item"><span class="ni-icon">🏃</span> <span data-i18n="nav.combat.mobchase">Monster Chase Fix</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Drops & Broadcasts <span class="caret">▼</span>
+      <span data-i18n="nav.inventory">Inventory & Items</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#drops-announcer" class="nav-item"><span class="ni-icon">📢</span> Rare Drop Announcer</a>
+      <a href="#inv-favorite"      class="nav-item"><span class="ni-icon">⭐</span> <span data-i18n="nav.inv.favorite">Favorite Tab Protection</span></a>
+      <a href="#inv-descriptions"  class="nav-item"><span class="ni-icon">📝</span> <span data-i18n="nav.inv.descriptions">Item Descriptions</span></a>
+      <a href="#inv-overweight"    class="nav-item"><span class="ni-icon">⚖️</span> <span data-i18n="nav.inv.overweight">Overweight Regen (70%)</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Pets & Companions <span class="caret">▼</span>
+      <span data-i18n="nav.drops">Drops & Broadcasts</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#pet-autofeed" class="nav-item"><span class="ni-icon">🐾</span> Pet Auto-Feed</a>
+      <a href="#drops-announcer" class="nav-item"><span class="ni-icon">📢</span> <span data-i18n="nav.drops.announcer">Rare Drop Announcer</span></a>
     </div>
   </div>
 
   <div class="nav-section">
     <div class="nav-section-title" onclick="toggleNav(this)">
-      Quality of Life <span class="caret">▼</span>
+      <span data-i18n="nav.pets">Pets & Companions</span> <span class="caret">▼</span>
     </div>
     <div class="nav-items">
-      <a href="#qol-dialog" class="nav-item"><span class="ni-icon">💬</span> NPC Dialog Timeout</a>
+      <a href="#pet-autofeed" class="nav-item"><span class="ni-icon">🐾</span> <span data-i18n="nav.pet.autofeed">Pet Auto-Feed</span></a>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title" onclick="toggleNav(this)">
+      <span data-i18n="nav.infopanel">Info Panel</span> <span class="caret">▼</span>
+    </div>
+    <div class="nav-items">
+      <a href="#infopanel-main"    class="nav-item"><span class="ni-icon">📊</span> <span data-i18n="nav.info.main">Info Panel Overview</span></a>
+      <a href="#infopanel-account" class="nav-item"><span class="ni-icon">👤</span> <span data-i18n="nav.info.account">Account Info</span></a>
+      <a href="#infopanel-cmds"    class="nav-item"><span class="ni-icon">⚙️</span> <span data-i18n="nav.info.cmds">Command Settings</span></a>
+      <a href="#infopanel-guide"   class="nav-item"><span class="ni-icon">🗺️</span> <span data-i18n="nav.info.guide">Where to Level</span></a>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title" onclick="toggleNav(this)">
+      <span data-i18n="nav.dailyquests">Daily Quests</span> <span class="caret">▼</span>
+    </div>
+    <div class="nav-items">
+      <a href="#daily-adventure" class="nav-item"><span class="ni-icon">⚔️</span> <span data-i18n="nav.dq.adventure">Adventure Board</span></a>
+      <a href="#daily-scrap"     class="nav-item"><span class="ni-icon">🧺</span> <span data-i18n="nav.dq.scrap">Scrap Collector</span></a>
+    </div>
+  </div>
+
+  <div class="nav-section">
+    <div class="nav-section-title" onclick="toggleNav(this)">
+      <span data-i18n="nav.qol">Quality of Life</span> <span class="caret">▼</span>
+    </div>
+    <div class="nav-items">
+      <a href="#qol-dialog" class="nav-item"><span class="ni-icon">💬</span> <span data-i18n="nav.qol.dialog">NPC Dialog Timeout</span></a>
     </div>
   </div>
 
@@ -911,14 +1065,14 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 
   <!-- HERO -->
   <div class="wiki-hero" id="top">
-    <div class="wiki-hero-eyebrow">Episode 13.2 · Pre-Renewal · Low Rate</div>
-    <h1>Just <span>RO</span> Custom Wiki</h1>
-    <p class="wiki-hero-desc">Complete reference for every custom feature, command, and quality-of-life improvement added to Just RO. All changes are designed to enhance the experience without altering the authentic Ragnarok Online gameplay.</p>
+    <div class="wiki-hero-eyebrow" data-i18n="hero.eyebrow">Episode 13.2 · Pre-Renewal · Low Rate</div>
+    <h1 data-i18n="hero.title">Just <span>RO</span> Custom Wiki</h1>
+    <p class="wiki-hero-desc" data-i18n="hero.desc">Complete reference for every custom feature, command, and quality-of-life improvement added to Just RO. All changes are designed to enhance the experience without altering the authentic Ragnarok Online gameplay.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="hs-num">5</div><div class="hs-label">New Commands</div></div>
-      <div class="hero-stat"><div class="hs-num">421</div><div class="hs-label">Bestiary Monsters</div></div>
-      <div class="hero-stat"><div class="hs-num">9</div><div class="hs-label">Chef Cat Dishes</div></div>
-      <div class="hero-stat"><div class="hs-num">21</div><div class="hs-label">Total Features</div></div>
+      <div class="hero-stat"><div class="hs-num">5</div><div class="hs-label" data-i18n="hero.stat.commands">New Commands</div></div>
+      <div class="hero-stat"><div class="hs-num">421</div><div class="hs-label" data-i18n="hero.stat.bestiary">Bestiary Monsters</div></div>
+      <div class="hero-stat"><div class="hs-num">9</div><div class="hs-label" data-i18n="hero.stat.dishes">Chef Cat Dishes</div></div>
+      <div class="hero-stat"><div class="hs-num">35</div><div class="hs-label" data-i18n="hero.stat.total">Total Features</div></div>
     </div>
   </div>
 
@@ -941,8 +1095,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-commands" data-search-section="Commands">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">⌨️</div>
-        <h2>Player Commands</h2>
-        <span class="section-count">5 commands</span>
+        <h2 data-i18n="sec.commands.title">Player Commands</h2>
+        <span class="section-count" data-i18n="sec.commands.count">5 commands</span>
       </div>
 
       <div class="article-grid">
@@ -952,12 +1106,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🚫</div>
             <div>
-              <h3>@nolootid — Autoloot Blacklist</h3>
-              <div class="subtitle">Inventory Management &nbsp;<span class="badge badge-gold">All Players</span></div>
+              <h3 data-i18n="card.nolootid.title">@nolootid — Autoloot Blacklist</h3>
+              <div class="subtitle"><span data-i18n="card.nolootid.sub">Inventory Management</span> &nbsp;<span class="badge badge-gold" data-i18n="lbl.allplayers">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Creates a personal blacklist of up to <strong>10 items</strong> that will <em>never</em> be auto-picked up, regardless of your current <code>@autoloot</code>, <code>@alootid</code>, or <code>@autoloottype</code> settings. Works as the direct opposite of <code>@alootid</code>.</p>
+            <p data-i18n="card.nolootid.p1">Creates a personal blacklist of up to <strong>10 items</strong> that will <em>never</em> be auto-picked up, regardless of your current <code>@autoloot</code>, <code>@alootid</code>, or <code>@autoloottype</code> settings. Works as the direct opposite of <code>@alootid</code>.</p>
             <div class="cmd-block">
               <div class="cmd-line">
                 <span class="cmd-syntax">@nolootid</span>
@@ -979,7 +1133,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
                 <span class="cmd-desc">View both lists</span>
               </div>
             </div>
-            <div class="callout">
+            <div class="callout" data-i18n="callout.nolootid">
               <strong>Priority rule:</strong> The blacklist overrides everything — even <code>@autoloot 100</code> and items also present in your <code>@alootid</code> whitelist. Items in your nolootid list stay on the ground unconditionally.
             </div>
             <ul class="bullet-list">
@@ -995,12 +1149,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📌</div>
             <div>
-              <h3>@hold — Movement Lock</h3>
-              <div class="subtitle">Gameplay Utility &nbsp;<span class="badge badge-blue">All Players</span></div>
+              <h3 data-i18n="card.hold.title">@hold — Movement Lock</h3>
+              <div class="subtitle"><span data-i18n="card.hold.sub">Gameplay Utility</span> &nbsp;<span class="badge badge-blue" data-i18n="lbl.allplayers">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Toggles a full movement lock on your character. While active, your character cannot walk or be moved by skills. All skills fire from your current position, provided the target is within range.</p>
+            <p data-i18n="card.hold.p1">Toggles a full movement lock on your character. While active, your character cannot walk or be moved by skills. All skills fire from your current position, provided the target is within range.</p>
             <div class="cmd-block">
               <div class="cmd-line">
                 <span class="cmd-syntax">@hold</span>
@@ -1013,7 +1167,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               <li>Skills requiring movement to reach target will simply fail — your character does not take a single step</li>
               <li>Use <code>@hold</code> again to deactivate</li>
             </ul>
-            <div class="callout blue">
+            <div class="callout blue" data-i18n="callout.hold">
               <strong>Best for:</strong> Wizards holding a Magnetic Earth position, Snipers in a fixed fire lane, Priests stationary healing in WoE, or any class that needs to cast without accidentally moving.
             </div>
           </div>
@@ -1024,12 +1178,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">💀</div>
             <div>
-              <h3>@killcount — Monster Kill Counter</h3>
-              <div class="subtitle">Progression &nbsp;<span class="badge badge-green">All Players</span></div>
+              <h3 data-i18n="card.killcount.title">@killcount — Monster Kill Counter</h3>
+              <div class="subtitle"><span data-i18n="card.killcount.sub">Progression</span> &nbsp;<span class="badge badge-green" data-i18n="lbl.allplayers">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Shows how many times your character has killed a specific monster, plus the top 3 killers server-wide for that mob. Kills are tracked persistently — your count never resets.</p>
+            <p data-i18n="card.killcount.p1">Shows how many times your character has killed a specific monster, plus the top 3 killers server-wide for that mob. Kills are tracked persistently — your count never resets.</p>
             <div class="cmd-block">
               <div class="cmd-line">
                 <span class="cmd-syntax">@killcount</span>
@@ -1058,12 +1212,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">👁️</div>
             <div>
-              <h3>@raredrophide — Drop Privacy</h3>
-              <div class="subtitle">Broadcasts &nbsp;<span class="badge badge-purple">All Players</span></div>
+              <h3 data-i18n="card.raredrophide.title">@raredrophide — Drop Privacy</h3>
+              <div class="subtitle"><span data-i18n="card.raredrophide.sub">Broadcasts</span> &nbsp;<span class="badge badge-purple" data-i18n="lbl.allplayers">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Toggles whether your character name appears in the global rare drop broadcast when you obtain a rare item. When active, the announcement shows <strong>Player</strong> instead of your name.</p>
+            <p data-i18n="card.raredrophide.p1">Toggles whether your character name appears in the global rare drop broadcast when you obtain a rare item. When active, the announcement shows <strong>Player</strong> instead of your name.</p>
             <div class="cmd-block">
               <div class="cmd-line">
                 <span class="cmd-syntax">@raredrophide</span>
@@ -1083,12 +1237,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📡</div>
             <div>
-              <h3>@streamon / @streamoff</h3>
-              <div class="subtitle">Streamer Programme &nbsp;<span class="badge badge-orange">Streamers Only</span></div>
+              <h3 data-i18n="card.streamon.title">@streamon / @streamoff</h3>
+              <div class="subtitle"><span data-i18n="card.streamon.sub">Streamer Programme</span> &nbsp;<span class="badge badge-orange" data-i18n="lbl.streamersonly">Streamers Only</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Available exclusively to players with an approved Streamer account. These commands mark the start and end of a live streaming session and track active gameplay time to calculate rewards.</p>
+            <p data-i18n="card.streamon.p1">Available exclusively to players with an approved Streamer account. These commands mark the start and end of a live streaming session and track active gameplay time to calculate rewards.</p>
             <div class="cmd-block">
               <div class="cmd-line">
                 <span class="cmd-syntax">@streamon</span>
@@ -1101,13 +1255,13 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               </div>
             </div>
             <div class="stat-row">
-              <div class="stat-chip"><span class="sc-label">Min. session</span><span class="sc-val">45 min</span></div>
-              <div class="stat-chip"><span class="sc-label">Points/min</span><span class="sc-val">1 pt</span></div>
-              <div class="stat-chip"><span class="sc-label">AFK timeout</span><span class="sc-val">5 min</span></div>
-              <div class="stat-chip"><span class="sc-label">Cooldown</span><span class="sc-val">15 min</span></div>
-              <div class="stat-chip"><span class="sc-label">Broadcast</span><span class="sc-val">Every 30 min</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.minSession">Min. session</span><span class="sc-val">45 min</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.pointsMin">Points/min</span><span class="sc-val">1 pt</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.afkTimeout">AFK timeout</span><span class="sc-val">5 min</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.cooldown">Cooldown</span><span class="sc-val">15 min</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.broadcast">Broadcast</span><span class="sc-val">Every 30 min</span></div>
             </div>
-            <div class="callout">
+            <div class="callout" data-i18n="callout.streamon">
               <strong>Note:</strong> Accepts any streaming platform URL — Twitch, YouTube, Kick, Facebook, etc. Only Twitch streams are displayed on the website homepage, but all platforms earn in-game points.
             </div>
           </div>
@@ -1117,14 +1271,271 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     </div><!-- /sec-commands -->
 
     <!-- ========================================================
+         SECTION: BATTLEGROUND
+    ======================================================== -->
+    <div class="section-divider"></div>
+    <div class="wiki-section" id="sec-bg" data-search-section="Battleground BG PvP">
+      <div class="wiki-section-header">
+        <div class="wiki-section-icon">🏟️</div>
+        <h2 data-i18n="sec.bg.title">Battleground</h2>
+        <span class="section-count" data-i18n="sec.bg.count">7 features · 13 modes</span>
+      </div>
+
+      <!-- Overview & Modes -->
+      <div class="article-grid wide">
+        <div class="article-card" id="bg-overview" data-search-tags="battleground BG modes tierra gorge flavius domination eye of storm bossnia capture the flag stone control death match conquest rush poring ball bomberman double inferno BGEXTENDED queue">
+          <div class="article-card-head">
+            <div class="article-card-icon">🏟️</div>
+            <div>
+              <h3 data-i18n="card.bgoverview.title">Battleground — All Available Modes</h3>
+              <div class="subtitle">BGEXTENDED &nbsp;<span class="badge badge-red">13 Modes</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgoverview.p1">Just RO runs the full <strong>BGEXTENDED</strong> battleground suite. All modes are queued from the <strong>Battleground Room</strong> (<code>bat_room</code>) via the automated queue system. Two teams compete for badges, LP, and bragging rights.</p>
+
+            <h4 style="margin:14px 0 8px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.officialModes">Official Modes</h4>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.mode">Mode</th><th data-i18n="th.map">Map</th><th data-i18n="th.objective">Objective</th><th data-i18n="lbl.win">Win</th><th data-i18n="lbl.loss">Loss</th></tr></thead>
+                <tbody>
+                  <tr><td>Tierra Gorge</td><td>Tierra Gorge</td><td>Defeat the enemy Sword / Bow Guardian</td><td style="color:var(--green)">3 Bravery Badges</td><td style="color:var(--red)">1 Bravery Badge</td></tr>
+                  <tr><td>Flavius</td><td>Flavius</td><td>Large-scale team PvP across multiple objectives</td><td style="color:var(--green)">9 Valor Badges</td><td style="color:var(--red)">3 Valor Badges</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="margin:16px 0 8px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.extendedModes">Extended Modes (BGEXTENDED)</h4>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.mode">Mode</th><th data-i18n="th.map">Map</th><th data-i18n="th.objective">Objective</th><th data-i18n="th.lp">LP</th></tr></thead>
+                <tbody>
+                  <tr><td>🏴 Domination</td><td>Tierra Gorge</td><td>Capture and hold all three crystals simultaneously</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>🌀 Eye of Storm</td><td>Tierra Gorge</td><td>Control the central storm crystal to score points</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>💀 Bossnia</td><td>Tierra Gorge</td><td>Defeat the enemy team's boss guardian</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>🚩 Capture the Flag</td><td>Flavius</td><td>Steal the enemy flag and return it to your base</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>🪨 Stone Control</td><td>Flavius</td><td>Capture and hold scattered stone objectives</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>⚔️ Death Match</td><td>Flavius</td><td>Pure PvP — highest kill count wins</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>🏰 Conquest</td><td>Flavius / Tierra</td><td>Attackers breach the enemy base; defenders hold it</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>💨 Rush</td><td>Flavius / Tierra</td><td>Escort a unit to the enemy's zone</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>🔥 Double Inferno</td><td>Special</td><td>Two-team elimination in a fire-themed arena</td><td><span class="badge badge-gold">Yes</span></td></tr>
+                  <tr><td>⚽ Poring Ball</td><td>Special</td><td>Novelty sport mode — kick the Poring into the goal</td><td><span class="badge badge-red">No</span></td></tr>
+                  <tr><td>💣 Bomberman</td><td>Ice / Village / Cemetery</td><td>Trap and eliminate opponents with bombs (3 maps)</td><td><span class="badge badge-red">No</span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout" data-i18n="callout.bgmodes" style="margin-top:10px">
+              <strong>Poring Ball and Bomberman</strong> are excluded from the LP ranking system — they are fun modes and not part of the competitive ladder.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badge System -->
+      <div class="article-grid" style="margin-top:20px">
+        <div class="article-card" id="bg-badges" data-search-tags="badge bravery valor war 7828 7829 7773 tierra gorge flavius earn win loss currency battleground">
+          <div class="article-card-head">
+            <div class="article-card-icon">🎖️</div>
+            <div>
+              <h3 data-i18n="card.bgbadges.title">Badge System</h3>
+              <div class="subtitle">BG Currency &nbsp;<span class="badge badge-blue">3 Types</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgbadges.p1">Three badge types are used as Battleground currency. Each type comes from different modes and is spent at different NPCs.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.badge">Badge</th><th data-i18n="th.id">ID</th><th data-i18n="th.howToEarn">How to Earn</th><th data-i18n="th.usedAt">Used At</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Bravery Badge <span style="color:var(--text-dim);font-size:0.78rem">(BB)</span></td>
+                    <td><code>7828</code></td>
+                    <td>Tierra Gorge — <span style="color:var(--green)">Win: 3</span> · <span style="color:var(--red)">Loss: 1</span></td>
+                    <td>Erundek — BG weapons &amp; equipment (100 per item)</td>
+                  </tr>
+                  <tr>
+                    <td>Valor Badge <span style="color:var(--text-dim);font-size:0.78rem">(VB)</span></td>
+                    <td><code>7829</code></td>
+                    <td>Flavius — <span style="color:var(--green)">Win: 9</span> · <span style="color:var(--red)">Loss: 3</span></td>
+                    <td>Erundek — BG weapons &amp; equipment (100 per item)</td>
+                  </tr>
+                  <tr>
+                    <td>War Badge</td>
+                    <td><code>7773</code></td>
+                    <td>All BGEXTENDED modes</td>
+                    <td>Consumables Machine — BG-exclusive potions</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Erundek -->
+        <div class="article-card" id="bg-erundek" data-search-tags="erundek equipment exchange bravery valor badge weapon armor accessory 100 badges BG gear">
+          <div class="article-card-head">
+            <div class="article-card-icon">⚔️</div>
+            <div>
+              <h3 data-i18n="card.bgerundek.title">Erundek — Equipment Exchange</h3>
+              <div class="subtitle">Battleground Room · bat_room &nbsp;<span class="badge badge-purple">100 badges per item</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgerundek.p1"><strong>Erundek</strong> is the official BG equipment NPC in the Battleground Room. He exchanges <strong>Bravery Badges (BB)</strong> and <strong>Valor Badges (VB)</strong> for a full catalog of Battleground-exclusive gear.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.category">Category</th><th data-i18n="th.badge">Badge</th><th data-i18n="th.weaponTypes">Weapon Types Covered</th></tr></thead>
+                <tbody>
+                  <tr><td>Weapons — Group 1</td><td>BB / VB</td><td>Dagger · One-Handed Sword · Two-Handed Sword · Two-Handed Spear</td></tr>
+                  <tr><td>Weapons — Group 2</td><td>BB / VB</td><td>Staff · Mace · Two-Handed Axe · Huuma Shuriken</td></tr>
+                  <tr><td>Weapons — Group 3</td><td>BB / VB</td><td>Bow · Katar · Musical Instrument · Whip</td></tr>
+                  <tr><td>Weapons — Group 4</td><td>BB / VB</td><td>Book · Knuckle</td></tr>
+                  <tr><td>Weapons — Group 5</td><td>BB / VB</td><td>Revolver · Rifle · Gatling Gun · Shotgun · Grenade Launcher</td></tr>
+                  <tr><td>Armor</td><td>BB / VB</td><td>BG-exclusive armor sets</td></tr>
+                  <tr><td>Accessories</td><td>BB / VB</td><td>BG-exclusive accessories</td></tr>
+                  <tr><td>Consumables</td><td>BB / VB</td><td>Standard BG consumable items</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="callout" data-i18n="callout.bgerundek" style="margin-top:10px">
+              BG equipment is competitive-grade gear available <strong>exclusively</strong> through Battleground participation. It cannot be bought, crafted, or obtained through any other means.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Consumables Machine -->
+      <div class="article-grid" style="margin-top:20px">
+        <div class="article-card" id="bg-consumables" data-search-tags="consumables machine war badge exchange potion BG condensed white light blue concentration awakening berserk account bound only usable battleground map">
+          <div class="article-card-head">
+            <div class="article-card-icon">🧪</div>
+            <div>
+              <h3 data-i18n="card.bgcons.title">Consumables Machine — War Badge Exchange</h3>
+              <div class="subtitle">Battleground Room · bat_room &nbsp;<span class="badge badge-orange">War Badges → Potions</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgcons.p1">The <strong>Consumables Machine</strong> NPC exchanges <strong>War Badges</strong> (earned from all BGEXTENDED modes) for BG-exclusive potions. These potions are <em>account-bound</em> and <strong>can only be used inside an active Battleground map</strong> — they are disabled in the open world.</p>
+
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.exchangeRate">Exchange Rate</th><th data-i18n="th.item">Item</th><th data-i18n="th.effect">Effect</th></tr></thead>
+                <tbody>
+                  <tr><td style="color:var(--gold)">1 Badge → 50×</td><td>BG Condensed White Potion</td><td>Restores a fixed amount of HP</td></tr>
+                  <tr><td style="color:var(--gold)">1 Badge → 25×</td><td>BG Light Blue Potion</td><td>Restores HP (stronger variant)</td></tr>
+                  <tr><td style="color:var(--gold)">1 Badge → 30×</td><td>BG Concentration Potion</td><td>Increases ASPD for a duration</td></tr>
+                  <tr><td style="color:var(--gold)">1 Badge → 30×</td><td>BG Awakening Potion</td><td>Removes sleep and stone status</td></tr>
+                  <tr><td style="color:var(--gold)">1 Badge → 30×</td><td>BG Berserk Potion</td><td>Maximum ASPD for a duration</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="margin:14px 0 8px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.deliveryOptions">Delivery Options</h4>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <div class="ba-box after">
+                <span class="ba-label" data-i18n="lbl.inventory">Inventory</span>
+                <p>Items go to your inventory. Weight, stack cap, and free slot are all checked. If weight is insufficient, the machine offers a reduced amount (partial delivery).</p>
+              </div>
+              <div class="ba-box after" style="border-color:rgba(74,158,221,0.3);background:rgba(74,158,221,0.05)">
+                <span class="ba-label" style="color:var(--blue)" data-i18n="lbl.storage">Storage</span>
+                <p>Items go directly to your personal storage — no weight check, no need to open the storage window first. Stack cap and free slots still verified.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LP Ranking -->
+        <div class="article-card" id="bg-lp" data-search-tags="LP league points ranking win loss draw 19 12 10 account wide top 20 board NPC competitive ladder floor zero">
+          <div class="article-card-head">
+            <div class="article-card-icon">🏆</div>
+            <div>
+              <h3 data-i18n="card.bglp.title">BG League Points (LP) Ranking</h3>
+              <div class="subtitle">Competitive Ranking &nbsp;<span class="badge badge-gold" data-i18n="lbl.accountwide">Account-Wide</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bglp.p1">Just RO tracks a competitive LP ranking for all players across all ranked Battleground modes. Points accumulate at the <strong>account level</strong> — all your characters share the same LP pool.</p>
+
+            <div class="stat-row">
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.win">Win</span><span class="sc-val" style="color:var(--green)">+19 LP</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.loss">Loss</span><span class="sc-val" style="color:var(--red)">−12 LP</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.draw">Draw</span><span class="sc-val" style="color:var(--gray-l)">+10 LP</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.floor">Floor</span><span class="sc-val">0 LP</span></div>
+            </div>
+
+            <div class="wiki-table-wrap" style="margin-top:12px">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.rankingFeatures">Ranking Board Features</th><th></th></tr></thead>
+                <tbody>
+                  <tr><td>Top 20 Leaderboard</td><td>Top 3 highlighted in 🥇 gold / 🥈 silver / 🥉 bronze; full W/L/D breakdown shown</td></tr>
+                  <tr><td>Personal Stats</td><td>Your current LP, global rank (#X), and full Win/Loss/Draw record</td></tr>
+                  <tr><td>NPC Location</td><td>LP Ranking Board · Battleground Room (next to Erundek)</td></tr>
+                  <tr><td>Excluded Modes</td><td>Poring Ball and Bomberman — not part of the ranked ladder</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Emblems + Balancer -->
+      <div class="article-grid" style="margin-top:20px">
+        <div class="article-card" id="bg-emblems" data-search-tags="BG emblem team color display fix guild window guilded unguilded correct team color between games reset">
+          <div class="article-card-head">
+            <div class="article-card-icon">🎨</div>
+            <div>
+              <h3 data-i18n="card.bgemblems.title">Team Emblems — Fixed</h3>
+              <div class="subtitle">Visual Fix &nbsp;<span class="badge badge-green" data-i18n="lbl.bugfix">Bug Fix</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgemblems.p1">Team emblems (the colored team icons displayed on players and in the guild window during a Battleground) now display correctly for all players in all BGEXTENDED modes.</p>
+            <div class="before-after">
+              <div class="ba-box before">
+                <span class="ba-label" data-i18n="ba.before">Before</span>
+                <p>Guilded players showed their real guild emblem instead of the BG team color. Unguilded players showed a blank emblem. After the first game, the emblem broke for everyone on the second game.</p>
+              </div>
+              <div class="ba-box after">
+                <span class="ba-label" data-i18n="ba.after">After</span>
+                <p>All players — guilded or not — see the correct team color from the moment they enter the map. Emblems reset properly between games and never carry over from a previous match.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="article-card" id="bg-balancer" data-search-tags="mid game balancer join active BG teams even balanced simultaneous dispatch staging 30 seconds bossnia conquest rush">
+          <div class="article-card-head">
+            <div class="article-card-icon">⚖️</div>
+            <div>
+              <h3 data-i18n="card.bgbalancer.title">Mid-Game Balancer</h3>
+              <div class="subtitle">Fair Teams &nbsp;<span class="badge badge-teal">Auto</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.bgbalancer.p1">When a player joins an <strong>active</strong> Battleground already in progress, the server holds them briefly rather than sending them in immediately — preventing team imbalance from lopsided late joins.</p>
+            <ol class="step-list">
+              <li><span class="step-num">1</span>First player to join is staged and waits for a counterpart from the opposing team.</li>
+              <li><span class="step-num">2</span>When the counterpart joins, <strong>both enter simultaneously</strong> — teams stay even.</li>
+              <li><span class="step-num">3</span>If no counterpart appears within <strong>30 seconds</strong>, the staged player enters alone.</li>
+            </ol>
+            <div class="callout" data-i18n="callout.bgbalancer">
+              <strong>Applies to:</strong> Bossnia · Conquest · Rush
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /sec-bg -->
+
+    <!-- ========================================================
          SECTION: STREAMERS
     ======================================================== -->
     <div class="section-divider"></div>
     <div class="wiki-section" id="sec-streamers" data-search-section="Streamers">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">🎥</div>
-        <h2>Streamer Programme</h2>
-        <span class="section-count">2 features</span>
+        <h2 data-i18n="sec.streamers.title">Streamer Programme</h2>
+        <span class="section-count" data-i18n="sec.streamers.count">2 features</span>
       </div>
 
       <div class="article-grid">
@@ -1134,21 +1545,21 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🏆</div>
             <div>
-              <h3>Streamer Reward Programme</h3>
+              <h3 data-i18n="card.streamprog.title">Streamer Reward Programme</h3>
               <div class="subtitle">Content Creator System &nbsp;<span class="badge badge-orange">Invite Only</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Just RO rewards players who stream the server live. Approved streamers earn <strong>Kafra Points</strong> (cosmetic cash) by actively playing while on stream — no Pay-to-Win, purely as a thank-you for growing the community.</p>
+            <p data-i18n="card.streamprog.p1">Just RO rewards players who stream the server live. Approved streamers earn <strong>Kafra Points</strong> (cosmetic cash) by actively playing while on stream — no Pay-to-Win, purely as a thank-you for growing the community.</p>
 
-            <h4 style="margin-top:14px;margin-bottom:10px;color:var(--gold);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">How to Join</h4>
+            <h4 style="margin-top:14px;margin-bottom:10px;color:var(--gold);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;" data-i18n="h.howToJoin">How to Join</h4>
             <ol class="step-list">
               <li><span class="step-num">1</span>Contact Just RO staff on Discord and present your channel.</li>
               <li><span class="step-num">2</span>Once accepted, staff sends an <strong>activation code</strong> via in-game Rodex mail.</li>
               <li><span class="step-num">3</span>Visit the <strong>Streamer Manager NPC</strong> in Prontera, enter the code, and re-log.</li>
             </ol>
 
-            <h4 style="margin-top:14px;margin-bottom:10px;color:var(--gold);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;">How It Works</h4>
+            <h4 style="margin-top:14px;margin-bottom:10px;color:var(--gold);font-size:0.85rem;text-transform:uppercase;letter-spacing:1px;" data-i18n="h.howItWorks">How It Works</h4>
             <div class="stream-flow">
               <div class="flow-step"><strong>Step 1</strong>Go live</div>
               <div class="flow-arrow">→</div>
@@ -1162,11 +1573,11 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
             </div>
 
             <div class="stat-row" style="margin-top:12px">
-              <div class="stat-chip"><span class="sc-label">Conversion</span><span class="sc-val">1 pt = 1 Kafra Point</span></div>
-              <div class="stat-chip"><span class="sc-label">Item type</span><span class="sc-val">Account Bound</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.conversion">Conversion</span><span class="sc-val">1 pt = 1 Kafra Point</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.itemType">Item type</span><span class="sc-val">Account Bound</span></div>
             </div>
 
-            <div class="callout" style="margin-top:12px">
+            <div class="callout" data-i18n="callout.streamprog" style="margin-top:12px">
               <strong>Account Bound guarantee:</strong> All items purchased with earned Kafra Points are Account Bound — they cannot be traded, sold, or transferred. This prevents the reward programme from bypassing the no-P2W philosophy.
             </div>
           </div>
@@ -1177,12 +1588,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🌐</div>
             <div>
-              <h3>Live Streams on the Website</h3>
+              <h3 data-i18n="card.streamweb.title">Live Streams on the Website</h3>
               <div class="subtitle">Web Panel Integration &nbsp;<span class="badge badge-blue">Auto</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Active Twitch streams from Just RO streamers are displayed live on the website homepage while a session is running. No action is needed from the streamer or staff beyond typing <code>@streamon</code>.</p>
+            <p data-i18n="card.streamweb.p1">Active Twitch streams from Just RO streamers are displayed live on the website homepage while a session is running. No action is needed from the streamer or staff beyond typing <code>@streamon</code>.</p>
             <ul class="bullet-list">
               <li>A <strong>"Live Now on Twitch"</strong> section appears at the top of the homepage</li>
               <li>Each card shows an embedded stream preview, the streamer's character name, live duration, and a direct Watch link</li>
@@ -1202,8 +1613,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-social" data-search-section="Social Party">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">👥</div>
-        <h2>Social &amp; Party</h2>
-        <span class="section-count">3 features</span>
+        <h2 data-i18n="sec.social.title">Social &amp; Party</h2>
+        <span class="section-count" data-i18n="sec.social.count">3 features</span>
       </div>
 
       <div class="article-grid wide">
@@ -1213,16 +1624,16 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📋</div>
             <div>
-              <h3>Adventurer's Agency — Party Recruitment Board</h3>
+              <h3 data-i18n="card.agency.title">Adventurer's Agency — Party Recruitment Board</h3>
               <div class="subtitle">Social System &nbsp;<span class="badge badge-green">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>A built-in party recruitment system available directly from the game interface. Party leaders can advertise their group to the entire server, and solo players can browse and apply to open parties without spamming chat.</p>
+            <p data-i18n="card.agency.p1">A built-in party recruitment system available directly from the game interface. Party leaders can advertise their group to the entire server, and solo players can browse and apply to open parties without spamming chat.</p>
 
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:14px 0">
               <div>
-                <h4 style="color:var(--blue);margin-bottom:8px;font-size:0.82rem">For Party Leaders</h4>
+                <h4 style="color:var(--blue);margin-bottom:8px;font-size:0.82rem" data-i18n="h.joinHow">For Party Leaders</h4>
                 <ol class="step-list">
                   <li><span class="step-num">1</span>Create a party and be the leader.</li>
                   <li><span class="step-num">2</span>Open the Adventurer's Agency window.</li>
@@ -1232,7 +1643,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
                 </ol>
               </div>
               <div>
-                <h4 style="color:var(--green);margin-bottom:8px;font-size:0.82rem">For Players Seeking a Party</h4>
+                <h4 style="color:var(--green);margin-bottom:8px;font-size:0.82rem" data-i18n="h.lookHow">For Players Seeking a Party</h4>
                 <ol class="step-list">
                   <li><span class="step-num">1</span>Open the Adventurer's Agency window.</li>
                   <li><span class="step-num">2</span>Filter by level range, role, or purpose.</li>
@@ -1242,10 +1653,10 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               </div>
             </div>
 
-            <h4 style="color:var(--gold);margin-bottom:8px;font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">Listing Fields</h4>
+            <h4 style="color:var(--gold);margin-bottom:8px;font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.listingFields">Listing Fields</h4>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Field</th><th>Description</th><th>Options</th></tr></thead>
+                <thead><tr><th data-i18n="th.field">Field</th><th data-i18n="th.description">Description</th><th data-i18n="th.options">Options</th></tr></thead>
                 <tbody>
                   <tr><td>Level Range</td><td>Min and max base level you are recruiting</td><td>1 – 99</td></tr>
                   <tr><td>Roles Needed</td><td>Which roles are still open in your party</td><td>Tanker · Healer · Dealer · Assist</td></tr>
@@ -1255,7 +1666,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               </table>
             </div>
 
-            <div class="callout green" style="margin-top:12px">
+            <div class="callout green" data-i18n="callout.agency" style="margin-top:12px">
               <strong>Auto-broadcast:</strong> Every time a party leader registers a new listing, a server-wide green message announces the party to all online players — no manual shoutout needed.
             </div>
           </div>
@@ -1270,19 +1681,19 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">✉️</div>
             <div>
-              <h3>Rodex Restricted to Cities</h3>
+              <h3 data-i18n="card.rodex.title">Rodex Restricted to Cities</h3>
               <div class="subtitle">Economy Protection &nbsp;<span class="badge badge-red">Restriction</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>The in-game mail system (Rodex) can only be opened while you are in a <strong>city or town map</strong>. Attempting to open your mailbox in a field, dungeon, or non-city area displays an error and blocks access.</p>
+            <p data-i18n="card.rodex.p1">The in-game mail system (Rodex) can only be opened while you are in a <strong>city or town map</strong>. Attempting to open your mailbox in a field, dungeon, or non-city area displays an error and blocks access.</p>
             <div class="before-after">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>Rodex could be opened anywhere — including mid-dungeon or during boss fights, allowing instant item transfers on the fly.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>Rodex is a city-only convenience feature. Cities and towns (Prontera, Geffen, Payon, etc.) are always valid locations.</p>
               </div>
             </div>
@@ -1294,12 +1705,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🔑</div>
             <div>
-              <h3>Sign In with Google or Discord</h3>
+              <h3 data-i18n="card.oauth.title">Sign In with Google or Discord</h3>
               <div class="subtitle">Account System &nbsp;<span class="badge badge-blue">Web Panel</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Create a Just RO account and log into the Control Panel using your existing Google or Discord account — no need to remember a separate password just for the website.</p>
+            <p data-i18n="card.oauth.p1">Create a Just RO account and log into the Control Panel using your existing Google or Discord account — no need to remember a separate password just for the website.</p>
             <ol class="step-list">
               <li><span class="step-num">1</span>Go to the Control Panel login page.</li>
               <li><span class="step-num">2</span>Click <strong>Continue with Google</strong> or <strong>Continue with Discord</strong>.</li>
@@ -1307,7 +1718,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               <li><span class="step-num">4</span>Set your <strong>Username</strong> (in-game name) and <strong>Game Password</strong> (for the RO client only).</li>
               <li><span class="step-num">5</span>Account created immediately; logged in automatically.</li>
             </ol>
-            <div class="callout">
+            <div class="callout" data-i18n="callout.oauth">
               <strong>Security note:</strong> Just RO only requests permission to read your email address and basic profile. No posts, no contact access. If you lose access to your Google/Discord account, you can still log in with your username and password directly.
             </div>
           </div>
@@ -1323,8 +1734,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-progression" data-search-section="Progression Bestiary">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">📚</div>
-        <h2>Progression Systems</h2>
-        <span class="section-count">2 features</span>
+        <h2 data-i18n="sec.prog.title">Progression Systems</h2>
+        <span class="section-count" data-i18n="sec.prog.count">2 features</span>
       </div>
 
       <div class="article-grid wide">
@@ -1334,12 +1745,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📚</div>
             <div>
-              <h3>Bestiary Achievement System</h3>
+              <h3 data-i18n="card.bestiary.title">Bestiary Achievement System</h3>
               <div class="subtitle">Long-Term Progression &nbsp;<span class="badge badge-gold">421 Monsters</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Just RO includes a custom <strong>Bestiary</strong> tab in the Achievement window. It tracks how many times you have killed each regular monster in the game and awards an achievement when you reach <strong>5,000 kills</strong>.</p>
+            <p data-i18n="card.bestiary.p1">Just RO includes a custom <strong>Bestiary</strong> tab in the Achievement window. It tracks how many times you have killed each regular monster in the game and awards an achievement when you reach <strong>5,000 kills</strong>.</p>
 
             <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:16px 0">
               <div style="background:var(--bg3);border:1px solid var(--border);border-radius:8px;padding:16px;text-align:center">
@@ -1364,20 +1775,20 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               <li>Spans all maps available in <strong>Episode 13.2</strong></li>
             </ul>
 
-            <div class="callout" style="margin-top:12px">
+            <div class="callout" data-i18n="callout.bestiary" style="margin-top:12px">
               <strong>Why mini-bosses are excluded:</strong> Mini-boss and MVP-class monsters have irregular spawn rates that would make their 5,000-kill goals unfair compared to regular field monsters. Only regular monsters with predictable, grindable spawns are tracked.
             </div>
 
-            <h4 style="margin:18px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">🏆 Full Completion Reward</h4>
+            <h4 style="margin:18px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.completionReward">🏆 Full Completion Reward</h4>
             <div style="background:linear-gradient(135deg,rgba(212,168,67,0.1),rgba(212,168,67,0.04));border:1px solid rgba(212,168,67,0.35);border-radius:8px;padding:16px 18px;display:flex;align-items:center;gap:18px">
               <div style="font-size:2.8rem;flex-shrink:0">🐉</div>
               <div>
                 <div style="font-size:1rem;font-weight:800;color:var(--gold-light);margin-bottom:4px">Gold Dragon Helm <span style="font-size:0.75rem;font-weight:400;color:var(--text-dim);margin-left:6px">ID #5451</span></div>
                 <div style="font-size:0.85rem;color:var(--text);line-height:1.5">Complete <strong style="color:var(--gold)">all 421 Bestiary achievements</strong> to receive this exclusive headgear. The item is delivered directly to your character and is the <em>only</em> way to obtain it — it cannot be bought, traded, or found anywhere else in the game.</div>
                 <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-                  <span class="badge badge-gold">Unique Reward</span>
-                  <span class="badge badge-purple">Once per Account</span>
-                  <span class="badge badge-red">Cannot be Obtained Elsewhere</span>
+                  <span class="badge badge-gold" data-i18n="lbl.uniquereward">Unique Reward</span>
+                  <span class="badge badge-purple" data-i18n="lbl.oncepercaccount">Once per Account</span>
+                  <span class="badge badge-red" data-i18n="lbl.cannotbeobtained">Cannot be Obtained Elsewhere</span>
                 </div>
               </div>
             </div>
@@ -1391,13 +1802,13 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📊</div>
             <div>
-              <h3>Personal Kill Counter</h3>
+              <h3 data-i18n="card.killcountcard.title">Personal Kill Counter</h3>
               <div class="subtitle">Use <code>@killcount</code> &nbsp;<span class="badge badge-green">All Players</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Kill counts are tracked server-side per character. Use <code>@killcount &lt;mob&gt;</code> to see your personal count and the top 3 killers on the entire server for any monster. See the Commands section for full details.</p>
-            <div class="callout green">
+            <p data-i18n="card.killcountcard.p1">Kill counts are tracked server-side per character. Use <code>@killcount &lt;mob&gt;</code> to see your personal count and the top 3 killers on the entire server for any monster. See the Commands section for full details.</p>
+            <div class="callout green" data-i18n="callout.killcountcard">
               <strong>Tip:</strong> Kill counts feed directly into the Bestiary — your <code>@killcount</code> for a mob matches the progress shown in your Bestiary achievement.
             </div>
           </div>
@@ -1412,8 +1823,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-daily" data-search-section="Daily Features Chef Cat">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">🍳</div>
-        <h2>Daily Features</h2>
-        <span class="section-count">1 feature</span>
+        <h2 data-i18n="sec.daily.title">Daily Features</h2>
+        <span class="section-count" data-i18n="sec.daily.count">1 feature</span>
       </div>
 
       <div class="article-grid wide">
@@ -1423,14 +1834,14 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🐱</div>
             <div>
-              <h3>Chef Cat — Daily Buff NPC</h3>
+              <h3 data-i18n="card.chef.title">Chef Cat — Daily Buff NPC</h3>
               <div class="subtitle">Daily Engagement · Prontera &nbsp;<span class="badge badge-gold">1 Angeling Coin / dish</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p><strong>Chef Nyaa</strong> is a cat NPC located in Prontera who cooks magical dishes that grant powerful buffs for <strong>30 minutes</strong>. Each dish costs one <strong>Angeling Coin</strong> and the effect <em>survives death</em> — you will not lose it if your character is killed while the buff is active.</p>
+            <p data-i18n="card.chef.p1"><strong>Chef Nyaa</strong> is a cat NPC located in Prontera who cooks magical dishes that grant powerful buffs for <strong>30 minutes</strong>. Each dish costs one <strong>Angeling Coin</strong> and the effect <em>survives death</em> — you will not lose it if your character is killed while the buff is active.</p>
 
-            <h4 style="margin:14px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">Available Dishes</h4>
+            <h4 style="margin:14px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.availableDishes">Available Dishes</h4>
             <div class="dish-grid">
               <div class="dish-card"><span class="dc-emoji">📖</span><div class="dc-name">Tome of Wisdom</div><div class="dc-effect">+30% Monster EXP</div></div>
               <div class="dish-card"><span class="dc-emoji">🧂</span><div class="dc-name">Chef's Seasoning</div><div class="dc-effect">+15% Item Drop Rate</div></div>
@@ -1443,10 +1854,10 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               <div class="dish-card"><span class="dc-emoji">🍀</span><div class="dc-name">Four-Leaf Salad</div><div class="dc-effect">LUK +10</div></div>
             </div>
 
-            <h4 style="margin:16px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">Rules</h4>
+            <h4 style="margin:16px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.rules">Rules</h4>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Rule</th><th>Details</th></tr></thead>
+                <thead><tr><th data-i18n="th.rule">Rule</th><th data-i18n="th.details">Details</th></tr></thead>
                 <tbody>
                   <tr><td>Daily Limit</td><td>Up to <strong>4 meals per day</strong> — resets at midnight server time</td></tr>
                   <tr><td>Stacking</td><td><strong>One buff at a time only</strong> — wait for the current dish to expire before ordering the next</td></tr>
@@ -1469,8 +1880,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-mvp" data-search-section="MVP Boss Respawn Tombstone">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">👑</div>
-        <h2>MVP System</h2>
-        <span class="section-count">2 features</span>
+        <h2 data-i18n="sec.mvp.title">MVP System</h2>
+        <span class="section-count" data-i18n="sec.mvp.count">2 features</span>
       </div>
 
       <div class="article-grid">
@@ -1480,23 +1891,23 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">♻️</div>
             <div>
-              <h3>MVP Persistent Respawn</h3>
+              <h3 data-i18n="card.mvprespawn.title">MVP Persistent Respawn</h3>
               <div class="subtitle">Boss System &nbsp;<span class="badge badge-green">Auto</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>MVP bosses now survive server restarts and map reloads with their <strong>current HP intact</strong>.</p>
+            <p data-i18n="card.mvprespawn.p1">MVP bosses now survive server restarts and map reloads with their <strong>current HP intact</strong>.</p>
             <div class="before-after">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>Any server restart silently despawned active MVPs, resetting their timers. A freshly spawned MVP could disappear without warning.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>On restart, all live MVPs are saved to the database (map, coordinates, current HP, timer). On the next startup they are restored exactly as they were.</p>
               </div>
             </div>
-            <div class="callout" style="margin-top:12px">
+            <div class="callout" data-i18n="callout.mvprespawn" style="margin-top:12px">
               A restored MVP is given a <strong>2-hour hard despawn timer</strong> from the moment it comes back, as a safety net against stale database entries.
             </div>
           </div>
@@ -1507,15 +1918,15 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🪦</div>
             <div>
-              <h3>Enhanced MVP Tombstones</h3>
+              <h3 data-i18n="card.mvptombstone.title">Enhanced MVP Tombstones</h3>
               <div class="subtitle">Combat Summary &nbsp;<span class="badge badge-purple">Extended Info</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>When an MVP is killed, the tombstone left on the map now shows extended combat information. Walk up to the tombstone and click it to see the full summary.</p>
+            <p data-i18n="card.mvptombstone.p1">When an MVP is killed, the tombstone left on the map now shows extended combat information. Walk up to the tombstone and click it to see the full summary.</p>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Information</th><th>Description</th></tr></thead>
+                <thead><tr><th data-i18n="th.information">Information</th><th data-i18n="th.description">Description</th></tr></thead>
                 <tbody>
                   <tr><td>MVP Name</td><td>Which boss was killed and when</td></tr>
                   <tr><td>Top Damage</td><td>The player who dealt the most total damage and the exact amount</td></tr>
@@ -1537,8 +1948,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-combat" data-search-section="Combat Gameplay PvP WoE Traps Snap">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">⚔️</div>
-        <h2>Combat &amp; Gameplay</h2>
-        <span class="section-count">5 features</span>
+        <h2 data-i18n="sec.combat.title">Combat &amp; Gameplay</h2>
+        <span class="section-count" data-i18n="sec.combat.count">5 features</span>
       </div>
 
       <div class="article-grid">
@@ -1548,19 +1959,19 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🤝</div>
             <div>
-              <h3>Traps Do Not Affect Allies</h3>
-              <div class="subtitle">PvP / WoE &nbsp;<span class="badge badge-green">Bug Fix</span></div>
+              <h3 data-i18n="card.traps.title">Traps Do Not Affect Allies</h3>
+              <div class="subtitle">PvP / WoE &nbsp;<span class="badge badge-green" data-i18n="lbl.bugfix">Bug Fix</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Traps, Fire Pillars, and other placed skill units no longer trigger on party members or guild members of the caster, in <strong>both PvE and PvP maps</strong>.</p>
+            <p data-i18n="card.traps.p1">Traps, Fire Pillars, and other placed skill units no longer trigger on party members or guild members of the caster, in <strong>both PvE and PvP maps</strong>.</p>
             <div class="before-after">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>With <code>gvg_traps_target_all</code> active, traps triggered on everyone including allies in PvP/WoE, making coordinated trap play hazardous to your own team.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>Traps always ignore party members and guild members of the caster. Enemy players and enemy guild members remain valid targets.</p>
               </div>
             </div>
@@ -1573,22 +1984,22 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">⚡</div>
             <div>
-              <h3>Trap Limit — 12 Per Skill Type</h3>
-              <div class="subtitle">Balance &nbsp;<span class="badge badge-orange">Anti-Abuse</span></div>
+              <h3 data-i18n="card.traplimit.title">Trap Limit — 12 Per Skill Type</h3>
+              <div class="subtitle">Balance &nbsp;<span class="badge badge-orange" data-i18n="lbl.antiabuse">Anti-Abuse</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Each player has a maximum of <strong>12 active units per skill type</strong> on the map simultaneously.</p>
-            <div class="callout">
+            <p data-i18n="card.traplimit.p1">Each player has a maximum of <strong>12 active units per skill type</strong> on the map simultaneously.</p>
+            <div class="callout" data-i18n="callout.traplimit">
               <strong>Example:</strong> A Hunter can have 12 active Ankle Snares, 12 active Blast Mines, and 12 active Land Mines at the same time. Placing a 13th Ankle Snare automatically removes the oldest one (FIFO). Each skill type counts independently.
             </div>
             <div class="before-after" style="margin-top:12px">
               <div class="ba-box before">
-                <span class="ba-label">Problem</span>
+                <span class="ba-label" data-i18n="ba.problem">Problem</span>
                 <p>A single player could flood a map or chokepoint with an unreasonable number of traps, making some areas impassable.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">Solution</span>
+                <span class="ba-label" data-i18n="ba.solution">Solution</span>
                 <p>Tactical trap play remains fully viable. No limit to how often you place traps — only how many remain active simultaneously.</p>
               </div>
             </div>
@@ -1600,12 +2011,12 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🔒</div>
             <div>
-              <h3>Snap Cannot Escape Immobilization</h3>
+              <h3 data-i18n="card.snap.title">Snap Cannot Escape Immobilization</h3>
               <div class="subtitle">Anti-Exploit &nbsp;<span class="badge badge-red">Fixed</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>The Monk / Champion skill <strong>Body Relocation</strong> (Snap) is now blocked when the caster is under any immobilizing status effect.</p>
+            <p data-i18n="card.snap.p1">The Monk / Champion skill <strong>Body Relocation</strong> (Snap) is now blocked when the caster is under any immobilizing status effect.</p>
             <div class="block-list">
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Ankle Snare</strong><span>Snap fails while trapped</span></div></div>
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Spider Web</strong><span>Snap fails while webbed</span></div></div>
@@ -1613,7 +2024,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Electric Shocker</strong><span>Snap fails while shocked</span></div></div>
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Any movement-preventing status</strong><span>Snap fails if character cannot move</span></div></div>
             </div>
-            <div class="callout red" style="margin-top:0">
+            <div class="callout red" data-i18n="callout.snap" style="margin-top:0">
               <strong>Why:</strong> Snap-escaping traps was a well-known exploit — a Hunter places an Ankle Snare, a Monk/Champion walks in, and instantly teleports out. This change makes immobilizing skills reliable against all classes, as originally intended.
             </div>
           </div>
@@ -1624,19 +2035,19 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">⚔️</div>
             <div>
-              <h3>Sonic Blow Auto-Cast Fixed</h3>
-              <div class="subtitle">Assassin Cross &nbsp;<span class="badge badge-green">Bug Fix</span></div>
+              <h3 data-i18n="card.sonicblow.title">Sonic Blow Auto-Cast Fixed</h3>
+              <div class="subtitle">Assassin Cross &nbsp;<span class="badge badge-green" data-i18n="lbl.bugfix">Bug Fix</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>When Sonic Blow is triggered by a card effect (such as <strong>Injustice Card</strong>), the character now resumes normal attacking immediately after the skill animation ends.</p>
+            <p data-i18n="card.sonicblow.p1">When Sonic Blow is triggered by a card effect (such as <strong>Injustice Card</strong>), the character now resumes normal attacking immediately after the skill animation ends.</p>
             <div class="before-after">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>Sonic Blow triggered by a weapon card caused the character to stop auto-attacking entirely. The player had to manually click the enemy again to continue.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>The character seamlessly resumes auto-attacking after the Sonic Blow animation, exactly as expected for card auto-cast builds.</p>
               </div>
             </div>
@@ -1648,15 +2059,15 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🏃</div>
             <div>
-              <h3>Monsters Chase More Reliably</h3>
+              <h3 data-i18n="card.mobchase.title">Monsters Chase More Reliably</h3>
               <div class="subtitle">Mob AI &nbsp;<span class="badge badge-green">Two Fixes</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Two separate bugs caused monsters to abandon their target mid-chase. Both have been corrected, making mob-training and AoE farming work as intended.</p>
+            <p data-i18n="card.mobchase.p1">Two separate bugs caused monsters to abandon their target mid-chase. Both have been corrected, making mob-training and AoE farming work as intended.</p>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Fix</th><th>Problem</th><th>Result</th></tr></thead>
+                <thead><tr><th data-i18n="th.fix">Fix</th><th data-i18n="ba.problem">Problem</th><th data-i18n="th.result">Result</th></tr></thead>
                 <tbody>
                   <tr>
                     <td>Chase range correction</td>
@@ -1671,7 +2082,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
                 </tbody>
               </table>
             </div>
-            <div class="callout green" style="margin-top:12px">
+            <div class="callout green" data-i18n="callout.mobchase" style="margin-top:12px">
               <strong>Impact:</strong> The most noticeable benefit is for AoE classes — Wizards, Hunters, Professors — who gather mobs before using a big damage skill. Previously mobs peeled off before you could group them. Mob behavior now matches classic Ragnarok Online servers.
             </div>
             <p style="font-size:0.83rem;color:var(--text-dim);margin-top:10px">Note: Monsters still return home once they lose their target normally. No monster was made faster or given more HP.</p>
@@ -1688,8 +2099,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-inventory" data-search-section="Inventory Items Favorite Tab Descriptions Weight">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">🎒</div>
-        <h2>Inventory &amp; Items</h2>
-        <span class="section-count">3 features</span>
+        <h2 data-i18n="sec.inv.title">Inventory &amp; Items</h2>
+        <span class="section-count" data-i18n="sec.inv.count">3 features</span>
       </div>
 
       <div class="article-grid wide">
@@ -1699,14 +2110,14 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">⭐</div>
             <div>
-              <h3>Favorite Tab — Full Item Protection</h3>
+              <h3 data-i18n="card.favorite.title">Favorite Tab — Full Item Protection</h3>
               <div class="subtitle">Inventory Safety &nbsp;<span class="badge badge-gold">4 Protection Vectors</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Items placed in the <strong>Favorite tab</strong> of your inventory are now completely protected from accidental loss. Once favorited, nothing can remove an item without you manually un-favoriting it first.</p>
+            <p data-i18n="card.favorite.p1">Items placed in the <strong>Favorite tab</strong> of your inventory are now completely protected from accidental loss. Once favorited, nothing can remove an item without you manually un-favoriting it first.</p>
 
-            <h4 style="margin:14px 0 10px;color:var(--red);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">What Is Blocked</h4>
+            <h4 style="margin:14px 0 10px;color:var(--red);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.whatIsBlocked">What Is Blocked</h4>
             <div class="block-list">
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Selling to NPCs</strong><span>Favorited items do not appear in the NPC sell dialog selection.</span></div></div>
               <div class="block-item"><div class="bi-icon">🚫</div><div class="bi-text"><strong>Weapon Refining (Skill)</strong><span>Favorited weapons are hidden from the Whitesmith's Weapon Refine skill list. They simply don't appear as candidates.</span></div></div>
@@ -1716,11 +2127,11 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 
             <div class="before-after" style="margin-top:12px">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>The Favorite tab was only a visual organizer. Items inside could still be sold, refined, or consumed as crafting materials.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>Favorite = truly safe. Right-click any item and select "Favorite" to protect it. Un-favorite to make it available again.</p>
               </div>
             </div>
@@ -1736,15 +2147,15 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📝</div>
             <div>
-              <h3>Item Descriptions Overhauled</h3>
+              <h3 data-i18n="card.itemdesc.title">Item Descriptions Overhauled</h3>
               <div class="subtitle">All Items &nbsp;<span class="badge badge-blue">Accuracy</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>All item descriptions have been audited against the server database and corrected where they were incomplete or inaccurate. Three categories were updated across thousands of items.</p>
+            <p data-i18n="card.itemdesc.p1">All item descriptions have been audited against the server database and corrected where they were incomplete or inaccurate. Three categories were updated across thousands of items.</p>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Category</th><th>What Was Fixed</th></tr></thead>
+                <thead><tr><th data-i18n="th.category">Category</th><th data-i18n="th.whatWasFixed">What Was Fixed</th></tr></thead>
                 <tbody>
                   <tr>
                     <td>Missing Effects</td>
@@ -1769,16 +2180,16 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">⚖️</div>
             <div>
-              <h3>Overweight Regen Threshold — 70%</h3>
+              <h3 data-i18n="card.overweight.title">Overweight Regen Threshold — 70%</h3>
               <div class="subtitle">Quality of Life &nbsp;<span class="badge badge-teal">Config Change</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>Natural HP and SP regeneration now stops only when you are carrying more than <strong>70%</strong> of your maximum weight, up from the previous 50%.</p>
+            <p data-i18n="card.overweight.p1">Natural HP and SP regeneration now stops only when you are carrying more than <strong>70%</strong> of your maximum weight, up from the previous 50%.</p>
             <div class="stat-row">
-              <div class="stat-chip"><span class="sc-label">Old threshold</span><span class="sc-val" style="color:var(--red)">50%</span></div>
-              <div class="stat-chip"><span class="sc-label">New threshold</span><span class="sc-val" style="color:var(--green)">70%</span></div>
-              <div class="stat-chip"><span class="sc-label">90% limit</span><span class="sc-val">Unchanged (no item pickup)</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.oldThreshold">Old threshold</span><span class="sc-val" style="color:var(--red)">50%</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.newThreshold">New threshold</span><span class="sc-val" style="color:var(--green)">70%</span></div>
+              <div class="stat-chip"><span class="sc-label" data-i18n="lbl.ninetyLimit">90% limit</span><span class="sc-val">Unchanged (no item pickup)</span></div>
             </div>
             <p style="font-size:0.88rem;color:var(--text);margin-top:10px">The 70% threshold gives significantly more room to carry drops and supplies before regen is affected. All other weight mechanics (max carry, 90% item-pickup block) remain unchanged.</p>
           </div>
@@ -1794,8 +2205,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-drops" data-search-section="Drops Broadcasts Rare Drop Announcer">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">📢</div>
-        <h2>Drops &amp; Broadcasts</h2>
-        <span class="section-count">1 feature</span>
+        <h2 data-i18n="sec.drops.title">Drops &amp; Broadcasts</h2>
+        <span class="section-count" data-i18n="sec.drops.count">1 feature</span>
       </div>
 
       <div class="article-grid wide">
@@ -1805,14 +2216,14 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">📢</div>
             <div>
-              <h3>Rare Drop Announcer — Clickable Links</h3>
+              <h3 data-i18n="card.raredrop.title">Rare Drop Announcer — Clickable Links</h3>
               <div class="subtitle">Server-Wide Broadcast &nbsp;<span class="badge badge-gold">Auto</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>When a player obtains a rare item from a monster, a colored server-wide message appears in chat. The item name is a <strong>clickable link</strong> — clicking it opens the full item description, just like Shift-clicking from your own inventory.</p>
+            <p data-i18n="card.raredrop.p1">When a player obtains a rare item from a monster, a colored server-wide message appears in chat. The item name is a <strong>clickable link</strong> — clicking it opens the full item description, just like Shift-clicking from your own inventory.</p>
 
-            <h4 style="margin:14px 0 8px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px">Message Format</h4>
+            <h4 style="margin:14px 0 8px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.messageFormat">Message Format</h4>
             <div class="cmd-block">
               <div class="cmd-line" style="color:var(--gold)">[PlayerName] just obtained [Poring Card] from [Poring].</div>
               <div class="cmd-line" style="color:var(--gold)">[PlayerName] just stole [Poring Card] from [Poring].</div>
@@ -1821,7 +2232,7 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
 
             <div class="wiki-table-wrap" style="margin-top:14px">
               <table class="wiki-table">
-                <thead><tr><th>Feature</th><th>Details</th></tr></thead>
+                <thead><tr><th data-i18n="th.feature">Feature</th><th data-i18n="th.details">Details</th></tr></thead>
                 <tbody>
                   <tr><td>Clickable Link</td><td>Item name opens full item tooltip with stats and description on click</td></tr>
                   <tr><td>Broadcast Color</td><td>Yellow by default, configurable by staff</td></tr>
@@ -1844,8 +2255,8 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     <div class="wiki-section" id="sec-pets" data-search-section="Pets Companions Auto-Feed">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">🐾</div>
-        <h2>Pets &amp; Companions</h2>
-        <span class="section-count">1 feature</span>
+        <h2 data-i18n="sec.pets.title">Pets &amp; Companions</h2>
+        <span class="section-count" data-i18n="sec.pets.count">1 feature</span>
       </div>
 
       <div class="article-grid">
@@ -1855,23 +2266,23 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">🐾</div>
             <div>
-              <h3>Pet Auto-Feed — All Pets</h3>
-              <div class="subtitle">Pet System &nbsp;<span class="badge badge-green">Bug Fix</span></div>
+              <h3 data-i18n="card.autofeed.title">Pet Auto-Feed — All Pets</h3>
+              <div class="subtitle">Pet System &nbsp;<span class="badge badge-green" data-i18n="lbl.bugfix">Bug Fix</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>The pet auto-feed toggle is now active and visible for <strong>every tameable pet</strong> in the game.</p>
+            <p data-i18n="card.autofeed.p1">The pet auto-feed toggle is now active and visible for <strong>every tameable pet</strong> in the game.</p>
             <div class="before-after">
               <div class="ba-box before">
-                <span class="ba-label">Before</span>
+                <span class="ba-label" data-i18n="ba.before">Before</span>
                 <p>The "Auto Feed" toggle was invisible in the pet interface for every pet, even though the feature was enabled on the server. Players had to manually feed pets or risk losing intimacy.</p>
               </div>
               <div class="ba-box after">
-                <span class="ba-label">After</span>
+                <span class="ba-label" data-i18n="ba.after">After</span>
                 <p>The toggle appears and works as intended. When enabled, the server automatically feeds your pet when its hunger drops below threshold — no manual action required.</p>
               </div>
             </div>
-            <div class="callout green" style="margin-top:12px">
+            <div class="callout green" data-i18n="callout.autofeed" style="margin-top:12px">
               Pets still eat the same food and grow intimacy the same way. The server just handles the timing automatically. At very low intimacy, a pet can still flee — auto-feed prevents that from happening passively.
             </div>
           </div>
@@ -1881,14 +2292,304 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
     </div><!-- /sec-pets -->
 
     <!-- ========================================================
+         SECTION: INFO PANEL
+    ======================================================== -->
+    <div class="section-divider"></div>
+    <div class="wiki-section" id="sec-infopanel" data-search-section="Info Panel Control Center">
+      <div class="wiki-section-header">
+        <div class="wiki-section-icon">📊</div>
+        <h2 data-i18n="sec.info.title">Info Panel</h2>
+        <span class="section-count" data-i18n="sec.info.count">4 sub-systems</span>
+      </div>
+
+      <!-- Overview card -->
+      <div class="article-grid wide">
+        <div class="article-card" id="infopanel-main" data-search-tags="info panel control center button interface account information daily quests command settings where to level vending storage attacking guard">
+          <div class="article-card-head">
+            <div class="article-card-icon">📊</div>
+            <div>
+              <h3 data-i18n="card.infomain.title">Info Panel — In-Game Control Center</h3>
+              <div class="subtitle">QoL Hub &nbsp;<span class="badge badge-blue">All Players</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.infomain.p1">A built-in control center accessible via a dedicated button in the game interface. It consolidates account stats, daily quest navigation, persistent command preferences, and a level guide in one place — no chat commands required.</p>
+
+            <div class="callout red" data-i18n="callout.infomain" style="margin-top:4px">
+              <strong>Safety guards:</strong> The panel cannot be opened while you have a <strong>vending store</strong>, <strong>chat room</strong>, or <strong>storage window</strong> open, or while your character is <strong>actively attacking</strong>. An 8-second reentrancy lock prevents double-opening from another NPC dialog. This protects ongoing transactions from being interrupted.
+            </div>
+
+            <h4 style="margin:16px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.menuStructure">Menu Structure</h4>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.option">Option</th><th data-i18n="th.whatItDoes">What It Does</th></tr></thead>
+                <tbody>
+                  <tr><td>Account Information</td><td>Shows character name, levels, zeny, and playtime for both character and account</td></tr>
+                  <tr><td>Daily Quests</td><td>Displays status of both daily quests and provides warp shortcuts (city maps only)</td></tr>
+                  <tr><td>Command Settings</td><td>Persistent toggles for Autoloot, Show EXP, No KS, and Hide Drop Name — all saved to your account</td></tr>
+                  <tr><td>Where to Level</td><td>Level range recommendations based on your current Base Level</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-grid" style="margin-top:20px">
+
+        <!-- Account Info -->
+        <div class="article-card" id="infopanel-account" data-search-tags="account information playtime character base level job level zeny hours minutes">
+          <div class="article-card-head">
+            <div class="article-card-icon">👤</div>
+            <div>
+              <h3 data-i18n="card.infoaccount.title">Account Information</h3>
+              <div class="subtitle">Info Panel → Account Information</div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.infoaccount.p1">Shows a live summary of your current character and account.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.field">Field</th><th data-i18n="th.description">Description</th></tr></thead>
+                <tbody>
+                  <tr><td>Character Name</td><td>Your current character's name</td></tr>
+                  <tr><td>Base Level</td><td>Current base level</td></tr>
+                  <tr><td>Job Level</td><td>Current job level</td></tr>
+                  <tr><td>Zeny</td><td>Current zeny balance on this character</td></tr>
+                  <tr><td>Char Playtime</td><td>Total hours and minutes played on this specific character</td></tr>
+                  <tr><td>Account Playtime</td><td>Total hours and minutes played across all characters on this account</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Command Settings -->
+        <div class="article-card" id="infopanel-cmds" data-search-tags="command settings autoloot show exp no ks hide drop name persistent saved login toggle">
+          <div class="article-card-head">
+            <div class="article-card-icon">⚙️</div>
+            <div>
+              <h3 data-i18n="card.infocmds.title">Command Settings — Persistent Toggles</h3>
+              <div class="subtitle">Info Panel → Command Settings &nbsp;<span class="badge badge-green">Saved to Account</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.infocmds.p1">All four toggles are saved to your account and <strong>automatically re-applied every time you log in</strong>. You configure them once and they persist indefinitely.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.setting">Setting</th><th data-i18n="th.whatItDoes">What It Does</th><th data-i18n="th.notes">Notes</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Autoloot</td>
+                    <td>Enable autoloot and set the pickup rate (1–100%)</td>
+                    <td>Equivalent to <code>@autoloot &lt;%&gt;</code>. Saved rate restored on login.</td>
+                  </tr>
+                  <tr>
+                    <td>Show EXP</td>
+                    <td>Display EXP gain after each kill</td>
+                    <td>Equivalent to <code>@showexp</code>. Restores on login.</td>
+                  </tr>
+                  <tr>
+                    <td>No KS</td>
+                    <td>Kill-steal protection — other players' monsters are marked as protected</td>
+                    <td>Equivalent to <code>@noks</code>. Restores on login.</td>
+                  </tr>
+                  <tr>
+                    <td>Hide Drop Name</td>
+                    <td>Replace your character name with "Player" in rare drop global broadcasts</td>
+                    <td>Equivalent to <code>@raredrophide</code>. Restores on login.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Where to Level -->
+        <div class="article-card" id="infopanel-guide" data-search-tags="where to level guide recommendations base level areas dungeon poring island orc dungeon payon thor abyss nameless">
+          <div class="article-card-head">
+            <div class="article-card-icon">🗺️</div>
+            <div>
+              <h3 data-i18n="card.infoguide.title">Where to Level Guide</h3>
+              <div class="subtitle">Info Panel → Where to Level &nbsp;<span class="badge badge-teal">Auto-updates</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.infoguide.p1">Shows a level range recommendation based on your current Base Level. Updates automatically as you level up.</p>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.baseLevel">Base Level</th><th data-i18n="th.recommendedAreas">Recommended Areas</th></tr></thead>
+                <tbody>
+                  <tr><td>1 – 20</td><td>Poring Island / Payon Fields</td></tr>
+                  <tr><td>20 – 40</td><td>Orc Dungeon 1 / Payon Dungeon 1–2</td></tr>
+                  <tr><td>40 – 60</td><td>Payon Dungeon 3–4 / Clock Tower B3</td></tr>
+                  <tr><td>60 – 75</td><td>Glast Heim Knight Tomb / Clock Tower 3F</td></tr>
+                  <tr><td>75 – 85</td><td>Magma Dungeon / Beach Dungeon 2</td></tr>
+                  <tr><td>85 – 95</td><td>Abyss Lake 1–3 / Thor Volcano 1</td></tr>
+                  <tr><td>95 – 99</td><td>Nameless Island / Thor Volcano 2–3</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /sec-infopanel -->
+
+    <!-- ========================================================
+         SECTION: DAILY QUESTS
+    ======================================================== -->
+    <div class="section-divider"></div>
+    <div class="wiki-section" id="sec-daily-quests" data-search-section="Daily Quests Adventure Board Scrap Collector Angeling Coin">
+      <div class="wiki-section-header">
+        <div class="wiki-section-icon">📅</div>
+        <h2 data-i18n="sec.dq.title">Daily Quests</h2>
+        <span class="section-count" data-i18n="sec.dq.count">2 NPCs · Angeling Coins</span>
+      </div>
+
+      <!-- Angeling Coin intro banner -->
+      <div style="background:linear-gradient(135deg,rgba(212,168,67,0.1),rgba(212,168,67,0.04));border:1px solid rgba(212,168,67,0.3);border-radius:8px;padding:16px 20px;margin-bottom:24px;display:flex;align-items:center;gap:16px">
+        <div style="font-size:2.2rem;flex-shrink:0">🪙</div>
+        <div>
+          <div style="font-weight:700;color:var(--gold-light);margin-bottom:4px">Angeling Coin (ID #8975)</div>
+          <div style="font-size:0.88rem;color:var(--text);line-height:1.5">The currency for the Chef Cat daily buff system. Earned exclusively through daily quests — <strong style="color:var(--gold)">Adventure Board</strong> gives 1 coin per completion, <strong style="color:var(--gold)">Scrap Collector</strong> gives 3 coins per completion. Both have an 8-hour cooldown, so a player who completes both daily quests every day earns up to <strong style="color:var(--gold)">4 coins / 8 hours</strong>.</div>
+        </div>
+      </div>
+
+      <div class="article-grid wide">
+
+        <!-- Adventure Board -->
+        <div class="article-card" id="daily-adventure" data-search-tags="adventure recruiter board daily quest hunt kill explore speak npc challenge reroll 10000 zeny 8 hour cooldown angeling coin drop boost exp boost prontera">
+          <div class="article-card-head">
+            <div class="article-card-icon">⚔️</div>
+            <div>
+              <h3 data-i18n="card.adventure.title">Adventure Board — Daily Mission</h3>
+              <div class="subtitle">Adventure Recruiter · Prontera &nbsp;<span class="badge badge-gold">8-hour cooldown</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.adventure.p1">The <strong>Adventure Recruiter</strong> NPC in Prontera assigns one mission per cycle from a rotating pool. Each completion rewards your choice of an Angeling Coin, a drop rate boost, or an EXP boost.</p>
+
+            <h4 style="margin:14px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.missionTypes">Mission Types</h4>
+            <div class="wiki-table-wrap">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.type">Type</th><th data-i18n="th.objective">Objective</th><th data-i18n="th.example">Example</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>🗡️ Hunt</td>
+                    <td>Kill 30 of a specific field monster</td>
+                    <td>Kill 30 Orcs, Kill 30 Zombies, Kill 30 Hydras</td>
+                  </tr>
+                  <tr>
+                    <td>🧭 Explore</td>
+                    <td>Travel to a dungeon and speak with the Explorer NPC located there</td>
+                    <td>Speak with the Explorer in Payon Dungeon, Orc Dungeon, Glast Heim, etc.</td>
+                  </tr>
+                  <tr>
+                    <td>💀 Challenge</td>
+                    <td>Kill 1 tough field monster</td>
+                    <td>Kill 1 Sohee, Kill 1 Orc Lady, Kill 1 Bathory</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h4 style="margin:16px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.howItWorks">How It Works</h4>
+            <ol class="step-list">
+              <li><span class="step-num">1</span>Talk to the Adventure Recruiter in Prontera. You see three mission offers.</li>
+              <li><span class="step-num">2</span>Pick one offer. Your mission starts immediately.</li>
+              <li><span class="step-num">3</span>Complete the objective. Kill count is tracked automatically for Hunt/Challenge; visiting the Explorer NPC completes Explore missions.</li>
+              <li><span class="step-num">4</span>Return to the Recruiter to claim your reward.</li>
+              <li><span class="step-num">5</span>An 8-hour cooldown begins. A new mission is available after it expires.</li>
+            </ol>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+              <div>
+                <h4 style="color:var(--blue);margin-bottom:8px;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.reroll">Reroll</h4>
+                <p style="font-size:0.88rem">Not happy with the three offers? Pay <strong style="color:var(--gold-light)">10,000 zeny</strong> to discard them and get three new ones. No limit on rerolls per visit.</p>
+              </div>
+              <div>
+                <h4 style="color:var(--red);margin-bottom:8px;font-size:0.8rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.abandon">Abandon</h4>
+                <p style="font-size:0.88rem">You can abandon an in-progress mission at any time. No reward is given, but you can accept a new mission on your next visit.</p>
+              </div>
+            </div>
+
+            <h4 style="margin:16px 0 10px;color:var(--gold);font-size:0.82rem;text-transform:uppercase;letter-spacing:1px" data-i18n="h.rewards">Completion Rewards (Your Choice)</h4>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px">
+              <div class="dish-card">
+                <span class="dc-emoji">🪙</span>
+                <div class="dc-name">Angeling Coin</div>
+                <div class="dc-effect">1× coin for Chef Cat</div>
+              </div>
+              <div class="dish-card">
+                <span class="dc-emoji">✨</span>
+                <div class="dc-name">Drop Boost</div>
+                <div class="dc-effect">+20% drop rate · 30 min</div>
+              </div>
+              <div class="dish-card">
+                <span class="dc-emoji">⭐</span>
+                <div class="dc-name">EXP Boost</div>
+                <div class="dc-effect">+25% monster EXP · 30 min</div>
+              </div>
+            </div>
+
+            <div class="callout" data-i18n="callout.adventure" style="margin-top:14px">
+              <strong>Explorer NPC locations:</strong> Payon Dungeon · Amatsu Dungeon · Gonryun Dungeon · Glast Heim (Knight Tomb) · Morroc Field. Visit the dungeon and talk to the Explorer there to complete the mission.
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="article-grid" style="margin-top:20px">
+
+        <!-- Scrap Collector -->
+        <div class="article-card" id="daily-scrap" data-search-tags="scrap collector daily item quest prontera potions herbs angeling coin 3 coins delivery 8 hour cooldown 30 50 random">
+          <div class="article-card-head">
+            <div class="article-card-icon">🧺</div>
+            <div>
+              <h3 data-i18n="card.scrap.title">Scrap Collector — Daily Item Delivery</h3>
+              <div class="subtitle">Scrap Collector · Prontera &nbsp;<span class="badge badge-gold">8-hour cooldown</span> &nbsp;<span class="badge badge-green">3 Angeling Coins</span></div>
+            </div>
+          </div>
+          <div class="article-card-body">
+            <p data-i18n="card.scrap.p1">The <strong>Scrap Collector</strong> NPC in Prontera requests a delivery of two random items. Completing the delivery earns <strong>3 Angeling Coins</strong> — the most efficient daily source of coins for Chef Cat.</p>
+
+            <ol class="step-list">
+              <li><span class="step-num">1</span>Talk to the Scrap Collector. He shows you two items he needs, each as a clickable link, with a quantity between 30 and 50.</li>
+              <li><span class="step-num">2</span>Gather both items in the required amounts.</li>
+              <li><span class="step-num">3</span>Return with both items in your inventory. He checks automatically and takes them.</li>
+              <li><span class="step-num">4</span>Receive <strong style="color:var(--gold-light)">3 Angeling Coins</strong>. An 8-hour cooldown begins.</li>
+            </ol>
+
+            <div class="wiki-table-wrap" style="margin-top:12px">
+              <table class="wiki-table">
+                <thead><tr><th data-i18n="th.itemPool">Item Pool</th><th data-i18n="th.quantityPerReq">Quantity per Request</th><th data-i18n="th.whereToGet">Where to Get Them</th></tr></thead>
+                <tbody>
+                  <tr><td>Red Potion · Orange Potion · Yellow Potion · White Potion</td><td rowspan="2" style="vertical-align:middle;text-align:center;font-weight:700;color:var(--gold)">30 – 50</td><td>Monster drops, NPC item shops</td></tr>
+                  <tr><td>Red Herb · Yellow Herb</td><td>Monster drops, field gathering</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="callout green" data-i18n="callout.scrap" style="margin-top:12px">
+              <strong>Tip — maximize coins per day:</strong> Complete both the Adventure Board and the Scrap Collector every 8 hours to earn up to 4 Angeling Coins per cycle (1 from Adventure + 3 from Scrap), which translates to <strong>4 Chef Cat dishes every 8 hours</strong>.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- /sec-daily-quests -->
+
+    <!-- ========================================================
          SECTION: QUALITY OF LIFE
     ======================================================== -->
     <div class="section-divider"></div>
     <div class="wiki-section" id="sec-qol" data-search-section="Quality of Life NPC Dialog Timeout">
       <div class="wiki-section-header">
         <div class="wiki-section-icon">✨</div>
-        <h2>Quality of Life</h2>
-        <span class="section-count">1 feature</span>
+        <h2 data-i18n="sec.qol.title">Quality of Life</h2>
+        <span class="section-count" data-i18n="sec.qol.count">1 feature</span>
       </div>
 
       <div class="article-grid">
@@ -1898,15 +2599,15 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
           <div class="article-card-head">
             <div class="article-card-icon">💬</div>
             <div>
-              <h3>NPC Dialog Timeout Extended</h3>
+              <h3 data-i18n="card.dialog.title">NPC Dialog Timeout Extended</h3>
               <div class="subtitle">Quality of Life &nbsp;<span class="badge badge-teal">Config</span></div>
             </div>
           </div>
           <div class="article-card-body">
-            <p>The time before an NPC dialog automatically closes due to inactivity has been significantly increased.</p>
+            <p data-i18n="card.dialog.p1">The time before an NPC dialog automatically closes due to inactivity has been significantly increased.</p>
             <div class="wiki-table-wrap">
               <table class="wiki-table">
-                <thead><tr><th>Situation</th><th>Before</th><th>Now</th></tr></thead>
+                <thead><tr><th data-i18n="th.situation">Situation</th><th data-i18n="ba.before">Before</th><th data-i18n="th.now">Now</th></tr></thead>
                 <tbody>
                   <tr><td>Waiting at a "Next" button</td><td style="color:var(--red)">1 minute</td><td style="color:var(--green);font-weight:700">5 minutes</td></tr>
                   <tr><td>Waiting at a selection menu</td><td style="color:var(--red)">1 minute</td><td style="color:var(--green);font-weight:700">5 minutes</td></tr>
@@ -1941,6 +2642,87 @@ mark { background: rgba(212,168,67,0.3); color: var(--gold-light); border-radius
      JAVASCRIPT
 ============================================================ -->
 <script>
+// ── THEME ────────────────────────────────────────────────────
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  const next = isDark ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  document.getElementById('themeToggle').textContent = next === 'dark' ? '🌙' : '☀️';
+  localStorage.setItem('jro-wiki-theme', next);
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem('jro-wiki-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  const btn = document.getElementById('themeToggle');
+  if (btn) btn.textContent = saved === 'dark' ? '🌙' : '☀️';
+})();
+
+// ── LANGUAGE ─────────────────────────────────────────────────
+let _currentLang = 'en';
+
+function applyTranslation(code) {
+  const t = (typeof WIKI_T !== 'undefined') ? WIKI_T[code] : null;
+  // apply data-i18n elements
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (t && t[key] !== undefined) {
+      el.innerHTML = t[key];
+    } else if (code === 'en') {
+      // restore from data-i18n-en if available
+      if (el.dataset.i18nEn) el.innerHTML = el.dataset.i18nEn;
+    }
+  });
+  // search placeholder
+  const sp = t ? t['ui.search'] : null;
+  const si = document.getElementById('searchInput');
+  if (si) si.placeholder = sp || 'Search features, commands...';
+  // no-results text
+  const nr = document.getElementById('noResults');
+  if (nr && t && t['ui.no-results']) nr.textContent = t['ui.no-results'];
+  // back to top
+  const btt = document.getElementById('backToTop');
+  if (btt && t && t['ui.back-top']) btt.innerHTML = t['ui.back-top'];
+  // footer
+  const fw = document.querySelector('.wiki-footer div:first-child');
+  if (fw && t && t['footer.text']) fw.innerHTML = t['footer.text'];
+  const fd = document.querySelector('.wiki-footer div:last-child');
+  if (fd && t && t['footer.updated']) fd.textContent = t['footer.updated'];
+  // lang buttons
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  const ab = document.getElementById('lb-' + code);
+  if (ab) ab.classList.add('active');
+  document.documentElement.lang = code;
+  _currentLang = code;
+  localStorage.setItem('jro-wiki-lang', code);
+  // rebuild search index labels for current lang
+  rebuildSearchLabels(t);
+}
+
+function rebuildSearchLabels(t) {
+  if (!t) return;
+  searchIndex.forEach(item => {
+    const titleKey = 'card.' + item.id.replace(/-/g,'') + '.title' ;
+    if (t[titleKey]) item.displayTitle = t[titleKey];
+    else item.displayTitle = item.title;
+  });
+}
+
+function setLang(code) {
+  applyTranslation(code);
+  clearSearch();
+}
+
+(function initLang() {
+  // cache EN originals before any translation
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    if (!el.dataset.i18nEn) el.dataset.i18nEn = el.innerHTML;
+  });
+  const saved = localStorage.getItem('jro-wiki-lang') || 'en';
+  applyTranslation(saved);
+})();
+
 // ── SEARCH DATA ──────────────────────────────────────────────
 const searchIndex = [
   { id: 'cmd-nolootid',    cat: 'Commands',           title: '@nolootid — Autoloot Blacklist',       tags: 'nolootid autoloot blacklist loot inventory pick up items farming' },
@@ -1948,6 +2730,13 @@ const searchIndex = [
   { id: 'cmd-killcount',   cat: 'Commands',           title: '@killcount — Monster Kill Counter',    tags: 'killcount kill count monster leaderboard top 3 farming tracker' },
   { id: 'cmd-raredrophide',cat: 'Commands',           title: '@raredrophide — Drop Privacy',         tags: 'raredrophide hide name rare drop broadcast privacy anonymous' },
   { id: 'cmd-streamon',    cat: 'Commands',           title: '@streamon / @streamoff',               tags: 'streamon streamoff streaming twitch youtube kafra points reward' },
+  { id: 'bg-overview',     cat: 'Battleground',       title: 'Battleground — All Available Modes',   tags: 'battleground BG modes tierra gorge flavius domination eye of storm bossnia capture flag stone control death match conquest rush poring ball bomberman double inferno BGEXTENDED queue' },
+  { id: 'bg-badges',      cat: 'Battleground',       title: 'Badge System',                          tags: 'badge bravery valor war 7828 7829 7773 tierra gorge flavius earn win loss currency' },
+  { id: 'bg-erundek',     cat: 'Battleground',       title: 'Erundek — Equipment Exchange',          tags: 'erundek equipment exchange bravery valor badge weapon armor accessory 100 badges BG gear' },
+  { id: 'bg-consumables', cat: 'Battleground',       title: 'Consumables Machine — War Badge Exchange', tags: 'consumables machine war badge exchange potion BG condensed white light blue concentration awakening berserk account bound battleground' },
+  { id: 'bg-lp',          cat: 'Battleground',       title: 'BG League Points (LP) Ranking',         tags: 'LP league points ranking win loss draw 19 12 10 account wide top 20 board competitive ladder' },
+  { id: 'bg-emblems',     cat: 'Battleground',       title: 'Team Emblems — Fixed',                  tags: 'BG emblem team color display fix guild window guilded unguilded' },
+  { id: 'bg-balancer',    cat: 'Battleground',       title: 'Mid-Game Balancer',                     tags: 'mid game balancer join active BG teams even balanced simultaneous dispatch staging 30 seconds bossnia conquest rush' },
   { id: 'stream-programme',cat: 'Streamers',          title: 'Streamer Reward Programme',            tags: 'streamer reward kafra points cosmetics invite code activation twitch youtube' },
   { id: 'stream-website',  cat: 'Streamers',          title: 'Live Streams on the Website',          tags: 'live streams website homepage twitch embed control panel' },
   { id: 'social-agency',   cat: 'Social & Party',     title: "Adventurer's Agency — Party Board",    tags: 'adventurer agency party board recruitment LFG looking for group join role filter tanker healer dealer' },
@@ -1969,6 +2758,12 @@ const searchIndex = [
   { id: 'drops-announcer', cat: 'Drops & Broadcasts', title: 'Rare Drop Announcer — Clickable Links','tags': 'rare drop announcer clickable item link broadcast color yellow format message obtained stole' },
   { id: 'pet-autofeed',    cat: 'Pets',               title: 'Pet Auto-Feed — All Pets',             tags: 'pet auto feed autofeed toggle intimacy hunger button all pets' },
   { id: 'qol-dialog',      cat: 'Quality of Life',    title: 'NPC Dialog Timeout Extended',          tags: 'npc dialog timeout extended minutes menu input next button idle close' },
+  { id: 'infopanel-main',    cat: 'Info Panel',       title: 'Info Panel — In-Game Control Center',  tags: 'info panel control center button interface vending storage attacking guard safety' },
+  { id: 'infopanel-account', cat: 'Info Panel',       title: 'Account Information',                  tags: 'account information playtime character base level job level zeny hours minutes' },
+  { id: 'infopanel-cmds',    cat: 'Info Panel',       title: 'Command Settings — Persistent Toggles',tags: 'command settings autoloot show exp no ks hide drop name persistent saved login toggle' },
+  { id: 'infopanel-guide',   cat: 'Info Panel',       title: 'Where to Level Guide',                 tags: 'where to level guide recommendations base level areas dungeon poring island orc dungeon payon thor abyss nameless' },
+  { id: 'daily-adventure',   cat: 'Daily Quests',     title: 'Adventure Board — Daily Mission',      tags: 'adventure recruiter board daily quest hunt kill explore speak npc challenge reroll 10000 zeny 8 hour cooldown angeling coin drop boost exp boost prontera' },
+  { id: 'daily-scrap',       cat: 'Daily Quests',     title: 'Scrap Collector — Daily Item Delivery','tags': 'scrap collector daily item quest prontera potions herbs angeling coin 3 coins delivery 8 hour cooldown 30 50 random' },
 ];
 
 const searchInput   = document.getElementById('searchInput');
